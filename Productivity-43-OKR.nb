@@ -1,0 +1,477 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18022,        469]
+NotebookOptionsPosition[     16507,        441]
+NotebookOutlinePosition[     16909,        457]
+CellTagsIndexPosition[     16866,        454]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Objectives and Key Results", "Title",
+ CellChangeTimes->{{3.9131148481914825`*^9, 3.9131148487831926`*^9}, {
+  3.9131160198075237`*^9, 
+  3.9131160264004526`*^9}},ExpressionUUID->"1e57bed2-eb37-4279-862f-\
+d911d57973a7"],
+
+Cell["Draft: 2 Jan 2024.", "Subtitle",
+ CellChangeTimes->{{3.913117673124075*^9, 
+  3.9131176798497868`*^9}},ExpressionUUID->"d285a142-8706-437d-ab0c-\
+cd275b947e58"],
+
+Cell[TextData[{
+ StyleBox["Objective: Finish annotating a cover of Lingua Latina: a Family in \
+Rome by Dec 2024, this is a committal OKR. The value is that I am able to \
+read Latin, ideally Livy.\n", "Section"],
+ "\n1. Finish annotating a short Latin primer by 1 June 2024.  This is to be \
+done to understand briefly the grammar of the Latin language.\n\n2. Finish \
+memorising declension tables by 1 June 2024. This is to be done by copying \
+declensions tables 100 times on pencil and paper. This will help in the \
+annotation of a \n\n3. Purchase a copy of all the relevant books by 1 March \
+2024. This is to be done once  I have sufficient savings to justify this \
+purchase.\n\n4. Finish annotating the grammatical structure of a copy of \
+Lingua Latina, with every sentence understood clearly by 1 December 2024.\n\n",
+ StyleBox["Objective: Attain an appreciation of economics and social science \
+from a few key books by 1 June 2024. The value is that of personal \
+satisfaction from a deeper understanding of the humanities.", "Section"],
+ "\n\n1. Finish annotating Universal Economics from cover to cover by Armen \
+Alchian by 1 June 2024, this is a committal OKR. The value is that I have a \
+solid grasp of economics an its associated intuition.\n\n2. Finish annotating \
+Explaining Social Behavior from cover to cover by Jon Elster by 1 June 2024. \
+The value is that I will better understand the nature of explanation in the \
+social sciences.\n\n3. Finish annotating  Thinking and Deciding from cover to \
+cover by Jonathan Baron by 1 June 2024, this is a committal OKR.\n\n4. \
+Rewrite the notebook on fallacies with respect to what was learnt and \
+understood in these three books by 1 September 2024. The values is to \
+synthesise what I have learnt into a reusable list of reminders as well as a \
+short checklists.\n\n5. Purchas more books in the history of the humanities \
+as recommended by 1 September 2024. This is continue furthering one\
+\[CloseCurlyQuote]s understanding of the humanities.\n\n",
+ StyleBox["Buy a bicycle and cycle along a public road by Dec 2024, this is \
+an aspirational objective (the most aspirational objective).", "Section"],
+ "\n\n 1. Buy a bicycle by 1 September 2024. The goal is to ultimately do \
+cardio mostly on a bicycle.\n \n 2. Attend a adult bicycle learning class at \
+East Coast Park on the weekend by 1 June 2024. This should be done before \
+getting a bicycle.\n \n 3. Buy a bicycle and cycle along a public road by 1 \
+Dec 2024, this is an aspirational objective.\n \n 4. Write up a summary of \
+Alan Couzen\[CloseCurlyQuote]s on cardiovascular fitness advice for exercise \
+by 1 March 2024.\n \n 5. Commit to an exercise regimen (with a mix of \
+endurance cardio and weight lifting) for 3 months by 1 October 2024. This is \
+in anticipation of a fitness test."
+}], "Text",
+ CellChangeTimes->{{3.913114863420482*^9, 3.9131149649942446`*^9}, {
+   3.913115008643464*^9, 3.913115024910158*^9}, {3.913115055818565*^9, 
+   3.913115174699338*^9}, {3.913115242579286*^9, 3.913115251495344*^9}, {
+   3.9131153074691133`*^9, 3.913115403070464*^9}, {3.913115436572503*^9, 
+   3.913115464717188*^9}, {3.913115542515026*^9, 3.9131156847585487`*^9}, {
+   3.913115807914899*^9, 3.9131158181135836`*^9}, {3.91311588761537*^9, 
+   3.913115993706108*^9}, {3.9131160325586042`*^9, 3.9131160356669254`*^9}, {
+   3.913116380376302*^9, 3.913116404177099*^9}, 3.9131164887545023`*^9, {
+   3.9131168703874807`*^9, 
+   3.9131171115597477`*^9}},ExpressionUUID->"173c5bff-d294-4cef-a0a1-\
+9c904ad4686c"],
+
+Cell[TextData[StyleBox["Understand probability, statistics, stochastic \
+processes by Dec 2024, and replicate all major techniques in Statistical \
+Consequences of Fat Tails. This is a aspirational objective.", "Section"]], \
+"Text",
+ CellChangeTimes->{{3.9131156944481993`*^9, 3.913115745762559*^9}, {
+  3.9131160111591625`*^9, 
+  3.9131160127768774`*^9}},ExpressionUUID->"64e7826e-e046-4a0d-a6e4-\
+3515de867591"],
+
+Cell["\<\
+1. Finish rewriting all probability notebooks in the Mathematica collection \
+by 1 June 2024. 
+
+2. Finish annotating The Elements of Information Theory by Cover and Thomas \
+by 1 September 2024.
+
+3. Finish annotating Critical Phenomena in the Natural Sciences by Didier \
+Sornette by 1 September 2024.
+
+4. Finish annotating the Statistical Consequences of Fat Tails by Nassim \
+Taleb by 1 September 2024.
+
+5. Finish one independent probability project (Monte Carlo methods, Markov \
+Chain, statistics, stochastic processes) by 1 December 2024.\
+\>", "Text",
+ CellChangeTimes->{{3.9131157520590687`*^9, 3.913115802210846*^9}, {
+  3.913116003197981*^9, 3.9131160067788906`*^9}, {3.913116039691473*^9, 
+  3.9131161797331843`*^9}},ExpressionUUID->"a93cc062-d91d-47f3-a368-\
+af5bccb7ae1d"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["G", "Section",
+      FontWeight->"Plain"], "ai", 
+     StyleBox["n", "Section",
+      FontWeight->"Plain"]}]], 
+   StyleBox[" ", "Section",
+    FontWeight->"Plain"], 
+   StyleBox[
+    RowBox[{
+     StyleBox[
+      StyleBox["a", "Section",
+       FontWeight->"Plain"], "Section",
+      FontWeight->"Plain"], 
+     StyleBox["n", "Section",
+      FontWeight->"Plain"]}], "Section",
+    FontWeight->"Plain"], 
+   StyleBox[" ", "Section",
+    FontWeight->"Plain"], 
+   StyleBox[
+    RowBox[{
+     StyleBox[
+      StyleBox[
+       StyleBox["a", "Section",
+        FontWeight->"Plain"], "Section",
+       FontWeight->"Plain"], "Section",
+      FontWeight->"Plain"], "pp", 
+     StyleBox["r", "Section",
+      FontWeight->"Plain"], "ec", 
+     StyleBox["i", "Section",
+      FontWeight->"Plain"], "at", 
+     StyleBox["i", "Section",
+      FontWeight->"Plain"], "on"}]], 
+   StyleBox[" ", "Section",
+    FontWeight->"Plain"], 
+   StyleBox[
+    RowBox[{
+     StyleBox[
+      StyleBox[
+       StyleBox["o", "Section",
+        FontWeight->"Plain"], "Section",
+       FontWeight->"Plain"], "Section",
+      FontWeight->"Plain"], 
+     StyleBox["f", "Section",
+      FontWeight->"Plain"]}]], 
+   StyleBox[" ", "Section",
+    FontWeight->"Plain"], 
+   StyleBox[
+    RowBox[{
+     StyleBox[
+      StyleBox[
+       StyleBox["g", "Section",
+        FontWeight->"Plain"], "Section",
+       FontWeight->"Plain"], "Section",
+      FontWeight->"Plain"], "en", 
+     StyleBox["e", "Section",
+      FontWeight->"Plain"], "ra", 
+     StyleBox["l", "Section",
+      FontWeight->"Plain"]}]], 
+   StyleBox[" ", "Section",
+    FontWeight->"Plain"], 
+   StyleBox[
+    RowBox[{
+     StyleBox["h", "Section",
+      FontWeight->"Plain"], "is", 
+     StyleBox["t", "Section",
+      FontWeight->"Plain"], "or", 
+     StyleBox["y", "Section",
+      FontWeight->"Plain"]}]], " ", "by", " ", "Dec", " ", "2024."}], 
+  "Section",
+  FontWeight->"Plain"]], "Input",
+ CellChangeTimes->{{3.9131161723578615`*^9, 3.913116195707632*^9}, {
+  3.9131162664291444`*^9, 3.9131162666802955`*^9}, {3.913117116804861*^9, 
+  3.913117121535989*^9}},ExpressionUUID->"37f7ce3f-e29b-4b4e-9bd9-\
+f860c6088b4f"],
+
+Cell["\<\
+1. Finish annotating The Penguin History of the World by 1 December 2024.
+
+2. Finish annotating Turnbull\[CloseCurlyQuote]s A History of Modern \
+Singapore by 1 June 2024.
+
+3. Obtain a copy and browse through Livy with genuine understanding by 1 \
+December2024.
+
+4. Finish annotating Gwendolyn Leick\[CloseCurlyQuote]s Mesopotamia by 1 June \
+2024.
+
+5. Purchase books on natural history, SEA history, Egypt history, China\
+\[CloseCurlyQuote]s history, Greek history, Roman history, Classical Indian \
+history, Classical Chinese history, the Dark Ages, Islamic history, Byzantine \
+history, Imperial China history, Middle East history, Japanese history, \
+European history, Modern Europe History, Europe colonialist history, Imperial \
+history, Ottoman empire, World War 1, World War 2, The Cold War, Singapore \
+history by 1 March 2024. Source all these history books from reputable \
+authors.\
+\>", "Text",
+ CellChangeTimes->{{3.913116268392891*^9, 3.9131163366283875`*^9}, {
+  3.913116539823914*^9, 
+  3.913116686761485*^9}},ExpressionUUID->"5243e563-5c06-4a5c-85d1-\
+c174a31bcfaf"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Objective", ":", " ", 
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      RowBox[{
+       StyleBox["S", "Section",
+        FontWeight->"Plain"], "ta", 
+       StyleBox[
+        StyleBox["r", "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], 
+       StyleBox[
+        StyleBox[
+         StyleBox["t", "Section",
+          FontWeight->"Plain"], "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"]}]], 
+     StyleBox[" ", "Section",
+      FontWeight->"Plain"], 
+     StyleBox[
+      RowBox[{
+       StyleBox[
+        StyleBox[
+         StyleBox[
+          StyleBox["b", "Section",
+           FontWeight->"Plain"], "Section",
+          FontWeight->"Plain"], "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], "ei", 
+       StyleBox[
+        StyleBox["n", "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], 
+       StyleBox[
+        StyleBox[
+         StyleBox["g", "Section",
+          FontWeight->"Plain"], "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"]}]], 
+     StyleBox[" ", "Section",
+      FontWeight->"Plain"], 
+     StyleBox[
+      RowBox[{
+       StyleBox[
+        StyleBox[
+         StyleBox[
+          StyleBox["m", "Section",
+           FontWeight->"Plain"], "Section",
+          FontWeight->"Plain"], "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], "or", 
+       StyleBox[
+        StyleBox["e", "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"]}]], 
+     StyleBox[" ", "Section",
+      FontWeight->"Plain"], 
+     StyleBox[
+      RowBox[{
+       StyleBox[
+        StyleBox[
+         StyleBox[
+          StyleBox["c", "Section",
+           FontWeight->"Plain"], "Section",
+          FontWeight->"Plain"], "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], "on", 
+       StyleBox[
+        StyleBox["s", "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], "is", 
+       StyleBox[
+        StyleBox["t", "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], "en", 
+       StyleBox[
+        StyleBox["t", "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"]}]], 
+     StyleBox[" ", "Section",
+      FontWeight->"Plain"], 
+     StyleBox[
+      RowBox[{
+       StyleBox[
+        StyleBox[
+         StyleBox[
+          StyleBox["b", "Section",
+           FontWeight->"Plain"], "Section",
+          FontWeight->"Plain"], "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], 
+       StyleBox[
+        StyleBox[
+         StyleBox["y", "Section",
+          FontWeight->"Plain"], "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"]}]], 
+     StyleBox[" ", "Section",
+      FontWeight->"Plain"], 
+     StyleBox[
+      RowBox[{
+       StyleBox[
+        StyleBox[
+         StyleBox[
+          StyleBox["u", "Section",
+           FontWeight->"Plain"], "Section",
+          FontWeight->"Plain"], "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], "si", 
+       StyleBox[
+        StyleBox["n", "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], 
+       StyleBox[
+        StyleBox[
+         StyleBox["g", "Section",
+          FontWeight->"Plain"], "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"]}]], 
+     StyleBox[" ", "Section",
+      FontWeight->"Plain"], 
+     StyleBox[
+      StyleBox[
+       StyleBox[
+        StyleBox["a", "Section",
+         FontWeight->"Plain"], "Section",
+        FontWeight->"Plain"], "Section",
+       FontWeight->"Plain"], "Section",
+      FontWeight->"Plain"], " ", "book", " ", "of", " ", "pilot"}], "-", 
+    RowBox[{
+    "styled", " ", "checklists", " ", "for", " ", "all", " ", "common", " ", 
+     "tasks", " ", "by", " ", 
+     StyleBox[
+      RowBox[{
+       StyleBox["Ju", "Section",
+        FontWeight->"Plain"], "ne"}]], 
+     StyleBox[" ", "Section",
+      FontWeight->"Plain"], "2024.", " ", "This", " ", "is", " ", "a", " ", 
+     "commital", " ", 
+     RowBox[{"OKR", "."}]}]}]}], "Section",
+  FontWeight->"Plain"]], "Input",
+ CellChangeTimes->{{3.9131175057924457`*^9, 3.9131175214619904`*^9}, {
+  3.913117554877245*^9, 3.9131175656197753`*^9}, {3.91311763526557*^9, 
+  3.913117641168838*^9}},ExpressionUUID->"b493e17f-9a7f-41e4-83f5-\
+957315e69784"],
+
+Cell["\<\
+1. List several 40 common processes and workflows that can be made more \
+consistent through the use of a checklist by 1 February 2024.
+2. Pilot test 10 checklists for a month by 1 March 2024.
+3. Fill up all pages a book of checklists for consistency by 1 May 2024.\
+\>", "Text",
+ CellChangeTimes->{{3.913117525859383*^9, 
+  3.9131176538277006`*^9}},ExpressionUUID->"e51ddf79-b9b5-41bd-ae0e-\
+72ea47161492"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{"Objective", ":", " ", 
+    RowBox[{"Learn", " ", "French"}]}], ",", " ", "listening", ",", " ", 
+   RowBox[{
+   "spoken", " ", "and", " ", "written", " ", "by", " ", "Dec", " ", "2024.", 
+    " ", "This", " ", "is", " ", "an", " ", "aspirational", " ", 
+    RowBox[{"OKR", "."}]}]}], "Section",
+  FontWeight->"Plain"]], "Input",
+ CellChangeTimes->{{3.9131167263849983`*^9, 
+  3.9131167595416327`*^9}},ExpressionUUID->"9b3c5a63-938c-4692-8a19-\
+ddd186fe81e8"],
+
+Cell["\<\
+1. Watch 5 French movies without subtitles by 1 December 2024.
+
+2. Annotate a untranslated French book by 1 December 2024.
+
+3. Read a basic primer on French grammar by 1 June 2024. \
+\>", "Text",
+ CellChangeTimes->{{3.9131167486316285`*^9, 3.913116791002406*^9}, {
+  3.913117338405972*^9, 
+  3.91311735796336*^9}},ExpressionUUID->"62eae37e-2032-4c03-8dcd-\
+a74f5047575f"],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Objective", ":", " ", 
+   RowBox[{
+   "Finish", " ", "revision", " ", "of", " ", "the", " ", "basic", " ", 
+    "mathematics", " ", "required", " ", "to", " ", "start", " ", 
+    "differential", " ", "geometry", " ", "by", " ", "Dec", " ", "2024.", " ",
+     "This", " ", "is", " ", "an", " ", "aspirational", " ", 
+    RowBox[{"OKR", "."}]}]}], "Section",
+  FontWeight->"Plain"]], "Input",
+ CellChangeTimes->{{3.9131167263849983`*^9, 3.9131167595416327`*^9}, {
+  3.9131171646068883`*^9, 
+  3.913117191168565*^9}},ExpressionUUID->"dd0b6acb-f2c1-4fc3-a694-\
+ad15fd6f34af"],
+
+Cell["\<\
+1. Finish all the problems in an Abstract Algebra by Silverman by 1 December \
+2024.
+2. Finish all the problems in Gilbert Strang\[CloseCurlyQuote]s Linear \
+Algebra by 1 December 2024.
+3. Finish all the problems in Emily Riehl\[CloseCurlyQuote]s Category Theory \
+in Context by 1 December 2024.
+4. Finish all the problems and Bartle and Sherbert\[CloseCurlyQuote]s \
+Introduction to Real Analysis by 1 December 2024.
+5. Finish annotating a copy of Abstract Algebra by Silverman by 1 June 2024.
+6. Finish annotating a copy of Gilbert Strang\[CloseCurlyQuote]s Linear \
+Algebra by 1 June 2024.
+7. Finish annotating a copy of Emily Riehl\[CloseCurlyQuote]s Category Theory \
+in Context by 1 June 2024.
+8. Finish aannotating a copy of Bartle and Sherbert\[CloseCurlyQuote]s \
+Introduction to Real Analysis by 1 June 2024.\
+\>", "Text",
+ CellChangeTimes->{{3.9131171917967834`*^9, 
+  3.9131173240250187`*^9}},ExpressionUUID->"ee069719-ee77-4aa4-912d-\
+e2bef970f743"]
+}, Open  ]]
+},
+WindowSize->{1440, 741.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d046eb28-d251-47ff-8753-806cde8ffca0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 226, 4, 98, "Title",ExpressionUUID->"1e57bed2-eb37-4279-862f-d911d57973a7"],
+Cell[809, 28, 166, 3, 53, "Subtitle",ExpressionUUID->"d285a142-8706-437d-ab0c-cd275b947e58"],
+Cell[978, 33, 3546, 50, 954, "Text",ExpressionUUID->"173c5bff-d294-4cef-a0a1-9c904ad4686c"],
+Cell[4527, 85, 414, 7, 89, "Text",ExpressionUUID->"64e7826e-e046-4a0d-a6e4-3515de867591"],
+Cell[4944, 94, 794, 19, 219, "Text",ExpressionUUID->"a93cc062-d91d-47f3-a368-af5bccb7ae1d"],
+Cell[5741, 115, 2229, 77, 48, "Input",ExpressionUUID->"37f7ce3f-e29b-4b4e-9bd9-f860c6088b4f"],
+Cell[7973, 194, 1094, 24, 265, "Text",ExpressionUUID->"5243e563-5c06-4a5c-85d1-c174a31bcfaf"],
+Cell[9070, 220, 4523, 146, 86, "Input",ExpressionUUID->"b493e17f-9a7f-41e4-83f5-957315e69784"],
+Cell[13596, 368, 417, 8, 81, "Text",ExpressionUUID->"e51ddf79-b9b5-41bd-ae0e-72ea47161492"],
+Cell[14016, 378, 506, 12, 48, "Input",ExpressionUUID->"9b3c5a63-938c-4692-8a19-ddd186fe81e8"],
+Cell[14525, 392, 381, 10, 127, "Text",ExpressionUUID->"62eae37e-2032-4c03-8dcd-a74f5047575f"],
+Cell[14909, 404, 607, 13, 86, "Input",ExpressionUUID->"dd0b6acb-f2c1-4fc3-a694-ad15fd6f34af"],
+Cell[15519, 419, 972, 19, 196, "Text",ExpressionUUID->"ee069719-ee77-4aa4-912d-e2bef970f743"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,3662 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    173811,       3654]
+NotebookOptionsPosition[    172056,       3616]
+NotebookOutlinePosition[    172464,       3632]
+CellTagsIndexPosition[    172421,       3629]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Github Test", "Title",
+ CellChangeTimes->{{3.9105091477645636`*^9, 
+  3.910509149135044*^9}},ExpressionUUID->"256a3eaf-adf7-4d54-b882-\
+918b704f819e"],
+
+Cell["\<\
+Source: https://raw.githubusercontent.com/antononcube/\
+MathematicaForPrediction/master/Misc/GitHubDataObjects.m\
+\>", "Subtitle",
+ CellChangeTimes->{{3.9105091678399453`*^9, 
+  3.910509168741496*^9}},ExpressionUUID->"9a3f92f1-b4ec-4a0e-98d1-\
+29be673f3e2b"],
+
+Cell[CellGroupData[{
+
+Cell["Code", "Section",
+ CellChangeTimes->{{3.9105091873468957`*^9, 
+  3.910509187651596*^9}},ExpressionUUID->"868900ea-5a7a-4653-97b3-\
+fbafadf79a9d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "GitHubDataObjects", " ", "Mathematica", " ", "package", " ", "Copyright",
+      " ", 
+     RowBox[{"(", "C", ")"}], " ", "2015", " ", "Anton", " ", "Antonov", " ", 
+     "This", " ", "program", " ", "is", " ", "free", " ", 
+     RowBox[{"software", ":", 
+      RowBox[{"you", " ", "can", " ", "redistribute", " ", "it", " ", 
+       RowBox[{"and", "/", "or"}], " ", "modify", " ", "it", " ", "under", 
+       " ", "the", " ", "terms", " ", "of", " ", "the", " ", "GNU", " ", 
+       "General", " ", "Public", " ", "License", " ", "as", " ", "published", 
+       " ", "by", " ", "the", " ", "Free", " ", "Software", " ", 
+       "Foundation"}]}]}], ",", 
+    RowBox[{
+    "either", " ", "version", " ", "3", " ", "of", " ", "the", " ", 
+     "License"}], ",", 
+    RowBox[{"or", " ", 
+     RowBox[{"(", 
+      RowBox[{"at", " ", "your", " ", "option"}], ")"}], " ", "any", " ", 
+     "later", " ", 
+     RowBox[{"version", ".", "This"}], " ", "program", " ", "is", " ", 
+     "distributed", " ", "in", " ", "the", " ", "hope", " ", "that", " ", 
+     "it", " ", "will", " ", "be", " ", "useful"}], ",", 
+    RowBox[{
+     RowBox[{"but", " ", "WITHOUT", " ", "ANY", " ", "WARRANTY"}], ";", 
+     RowBox[{
+     "without", " ", "even", " ", "the", " ", "implied", " ", "warranty", " ",
+       "of", " ", "MERCHANTABILITY", " ", "or", " ", "FITNESS", " ", "FOR", 
+      " ", "A", " ", "PARTICULAR", " ", 
+      RowBox[{"PURPOSE", ".", "See"}], " ", "the", " ", "GNU", " ", "General",
+       " ", "Public", " ", "License", " ", "for", " ", "more", " ", 
+      RowBox[{"details", ".", "You"}], " ", "should", " ", "have", " ", 
+      "received", " ", "a", " ", "copy", " ", "of", " ", "the", " ", "GNU", 
+      " ", "General", " ", "Public", " ", "License", " ", "along", " ", 
+      "with", " ", "this", " ", 
+      RowBox[{"program", ".", "If"}], " ", "not"}]}], ",", 
+    RowBox[{
+     RowBox[{"see", "<", 
+      RowBox[{"http", ":"}]}], "//", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"www", ".", "gnu", ".", "org"}], "/", "licenses"}], "/"}], 
+      ">", 
+      RowBox[{
+       RowBox[{".", "Written"}], " ", "by", " ", "Anton", " ", 
+       "Antonov"}]}]}], ",", 
+    RowBox[{
+     RowBox[{"antononcube", "@", "gmail"}], ".", "com"}], ",", "Windermere", 
+    ",", "Florida", ",", 
+    RowBox[{"USA", "."}]}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Mathematica", " ", "is", " ", 
+      RowBox[{"(", "C", ")"}], " ", "Copyright", " ", "1988"}], "-", 
+     RowBox[{"2015", " ", "Wolfram", " ", "Research"}]}], ",", 
+    RowBox[{
+     RowBox[{"Inc", ".", "Protected"}], " ", "by", " ", "copyright", " ", 
+     "law", " ", "and", " ", "international", " ", 
+     RowBox[{"treaties", ".", "Unauthorized"}], " ", "reproduction", " ", 
+     "or", " ", "distribution", " ", "subject", " ", "to", " ", "severe", " ",
+      "civil", " ", "and", " ", "criminal", " ", 
+     RowBox[{"penalties", ".", "Mathematica"}], " ", "is", " ", "a", " ", 
+     "registered", " ", "trademark", " ", "of", " ", "Wolfram", " ", 
+     "Research"}], ",", 
+    RowBox[{"Inc", "."}]}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{":", "Title", ":", "GitHubDataObjects"}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{":", "Author", ":", 
+    RowBox[{"Anton", " ", "Antonov"}]}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{":", "Date", ":", 
+    RowBox[{"2015", "-", "10", "-", "15"}]}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{":", 
+    RowBox[{"Package", " ", "Version"}], ":", "0.1"}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{":", 
+    RowBox[{"Mathematica", " ", "Version"}], ":", "10.2"}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{":", "Copyright", ":", 
+    RowBox[{
+     RowBox[{"(", "c", ")"}], " ", "2015", " ", "Anton", " ", "Antonov"}]}], 
+   "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{":", "Keywords", ":", "GitHub"}], ",", "commit", ",", "plot", ",", 
+    RowBox[{"design", " ", "patterns"}], ",", 
+    RowBox[{"Template", " ", "Method"}], ",", "Strategy", ",", "Decorator", 
+    ",", "Composite", ",", "GoF"}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{":", "Discussion", ":", 
+     RowBox[{
+      RowBox[{"This", " ", "package", " ", "provides", " ", "object"}], "-", 
+      RowBox[{
+      "oriented", " ", "implementation", " ", "of", " ", "visualization", " ",
+        "and", " ", "query", " ", "tasks", " ", "of", " ", "commits", " ", 
+       "data", " ", "from", " ", 
+       RowBox[{"GiHub", ".", "The"}], " ", "implementation", " ", "uses", " ",
+        "the", " ", "design", " ", "patterns", " ", "Template", " ", 
+       "Method"}]}]}], ",", "Strategy", ",", "Decorator", ",", 
+    RowBox[{
+    "and", " ", "Composite", " ", "described", " ", "in", " ", "the", " ", 
+     RowBox[{"book", ":", 
+      RowBox[{
+       RowBox[{"[", 
+        RowBox[{"GoF", "-", "94"}], "]"}], " ", "Erich", " ", "Gamma"}]}]}], 
+    ",", 
+    RowBox[{"Richard", " ", "Helm"}], ",", 
+    RowBox[{"Ralph", " ", "Johnson"}], ",", 
+    RowBox[{"John", " ", "Vlissides"}], ",", 
+    RowBox[{"Design", " ", 
+     RowBox[{"Patterns", ":", 
+      RowBox[{
+       RowBox[{"Elements", " ", "of", " ", "Reusable", " ", "Object"}], "-", 
+       RowBox[{"Oriented", " ", "Software"}]}]}]}], ",", 
+    RowBox[{"Addison", "-", "Wesley"}], ",", 
+    RowBox[{
+     RowBox[{
+     "1994.", " ", "The", " ", "implementation", " ", "is", " ", "a", " ", 
+      "modified", " ", "and", " ", "extended", " ", "version", " ", "of", " ",
+       "the", " ", "functions", " ", "in", " ", "the", " ", "package", " ", 
+      RowBox[{"\"\<GitHubPlots.m\>\"", ".", 
+       RowBox[{"(", 
+        RowBox[{
+        "Which", " ", "is", " ", "also", " ", "provided", " ", "in", " ", 
+         "this", " ", "MathematicaForPrediction", " ", "GitHub", " ", 
+         RowBox[{"project", "."}]}], ")"}]}], " ", "The", " ", "most", " ", 
+      "significant", " ", "feature", " ", "of", " ", "this", " ", "package", 
+      " ", "is", " ", "the", " ", "method", " ", "\"\<Plot3D\>\"", " ", "for",
+       " ", "a", " ", "collection", " ", "of", " ", "GitHub", " ", 
+      RowBox[{"projects", ".", "Here"}], " ", "is", " ", "an", " ", "example",
+       " ", "how", " ", "to", " ", "use", " ", 
+      RowBox[{"it", ":", "ghs"}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"MakeGitHubDataObject", "[", 
+           RowBox[{"\"\<hadley\>\"", ",", "#"}], "]"}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<plyr\>\"", ",", "\"\<dplyr\>\"", ",", "\"\<adv-r\>\"", ",", 
+           "\"\<ggplot2\>\"", ",", "\"\<devtools\>\"", ",", "\"\<rvest\>\""}],
+           "}"}]}], "]"}], " ", "ghComposite"}], "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"GitHubDataComposite", "[", 
+         RowBox[{
+          RowBox[{"Unique", "[", "]"}], ",", "ghs"}], "]"}], " ", 
+        RowBox[{"Through", "[", 
+         RowBox[{
+          RowBox[{"ghComposite", "[", 
+           RowBox[{"\"\<GetChildren\>\"", "[", "]"}], "]"}], "@", 
+          RowBox[{"\"\<Project\>\"", "[", "]"}]}], "]"}], " ", 
+        RowBox[{"ghComposite", "[", 
+         RowBox[{"\"\<Plot3D\>\"", "[", 
+          RowBox[{
+           RowBox[{"\"\<ProjectPlanes\>\"", "->", "True"}], ",", 
+           RowBox[{"BoxRatios", "->", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2"}], "}"}]}]}], "]"}], "]"}], " ", 
+        RowBox[{"ghComposite", "[", 
+         RowBox[{"\"\<Plot3D\>\"", "[", 
+          RowBox[{
+           RowBox[{"\"\<ProjectPlanes\>\"", "->", "False"}], ",", 
+           RowBox[{"\"\<GlobalTimeOrder\>\"", "->", "False"}], ",", 
+           RowBox[{"\"\<SubsetQueryFunction\>\"", "->", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"StringMatchQ", "[", 
+               RowBox[{"#committer", ",", 
+                RowBox[{"___", "~~", 
+                 RowBox[{"\"\<Hadley\>\"", "|", "\"\<hadley\>\""}], "~~", 
+                 "___"}]}], "]"}], "&"}], ")"}]}], ",", 
+           RowBox[{"\"\<SubsetLines\>\"", "->", "True"}], ",", 
+           RowBox[{"\"\<SubsetPlotStyle\>\"", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"PointSize", "[", "0.02", "]"}], ",", 
+              RowBox[{"Lighter", "[", "Purple", "]"}], ",", 
+              RowBox[{"Arrowheads", "[", 
+               RowBox[{
+                RowBox[{"10", "^", 
+                 RowBox[{"-", "7.7"}]}], ",", 
+                RowBox[{"Appearance", "->", "\"\<Flat\>\""}]}], "]"}]}], 
+             "}"}]}], ",", 
+           RowBox[{"PlotLabel", "->", "\"\<Hadley Wickham\>\""}], ",", 
+           RowBox[{"BoxRatios", "->", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "2"}], "}"}]}]}], "]"}], "]"}], " ", 
+        "Descriptions", " ", "of", " ", "the", " ", "options", " ", 
+        RowBox[{"follow", ".", "1."}], " ", "\"\<ProjectPlanes\>\""}], "->", 
+       RowBox[{
+        RowBox[{"True", "|", 
+         RowBox[{
+         "False", " ", "Should", " ", "planes", " ", "for", " ", "the", " ", 
+          "projects", " ", "be", " ", "drawn", " ", "on", " ", "the", " ", 
+          "3", "D", " ", 
+          RowBox[{"plot", ".", "2."}], " ", "\"\<GlobalTimeOrder\>\""}]}], "->", 
+        RowBox[{
+         RowBox[{"True", "|", 
+          RowBox[{
+          "False", " ", "Should", " ", "the", " ", "points", " ", "be", " ", 
+           "ordered", " ", "globally", " ", "in", " ", "time", " ", "or", " ",
+            "for", " ", "each", " ", "project", " ", 
+           RowBox[{"separately", ".", "If"}], " ", "False", " ", "the", " ", 
+           "points", " ", "of", " ", "each", " ", "project", " ", "are", " ", 
+           "given", " ", "Z", " ", "coordinate", " ", "corresponding", " ", 
+           "to", " ", "their", " ", "commit", " ", 
+           RowBox[{"order", ".", "If"}], " ", "True", " ", "the", " ", 
+           "points", " ", "of", " ", "all", " ", "projects", " ", "are", " ", 
+           "ordered", " ", "according", " ", "to", " ", "their", " ", "times",
+            " ", "and", " ", "their", " ", "Z", " ", "coordinates", " ", 
+           "are", " ", "derived", " ", "from", " ", "that", " ", "global", 
+           " ", 
+           RowBox[{"order", ".", "3."}], " ", 
+           "\"\<SubsetQueryFunction\>\""}]}], "->", 
+         RowBox[{
+          RowBox[{
+          "selectFunc", " ", "Allows", " ", "for", " ", "selection", " ", 
+           "of", " ", "points", " ", "that", " ", "adhere", " ", "to", " ", 
+           "a", " ", 
+           RowBox[{"predicate", ".", "The"}], " ", "function", " ", 
+           "selectFunc", " ", "is", " ", "used", " ", "in", " ", "the", " ", 
+           RowBox[{"Dataset", "'"}], "s", " ", "corresponding", " ", "to", 
+           " ", "the", " ", "projects", " ", "and", " ", "from", " ", "the", 
+           " ", "obtained", " ", "rows", " ", "the", " ", "subset", " ", "of",
+            " ", "points", " ", "is", " ", 
+           RowBox[{"derived", ".", "4."}], " ", "\"\<SubsetLines\>\""}], "->", 
+          RowBox[{
+           RowBox[{"True", "|", 
+            RowBox[{"False", " ", "Should", " ", "line", " ", "segments", " ", 
+             RowBox[{"(", "arrows", ")"}], " ", "be", " ", "drawn", " ", 
+             "between", " ", "the", " ", "subset", " ", 
+             RowBox[{"points", ".", "5."}], " ", 
+             "\"\<SubsetPlotStyle\>\""}]}], "->", 
+           RowBox[{
+           "subPloStyle", " ", "Graphics3D", " ", "directive", " ", "for", 
+            " ", "the", " ", "color"}]}]}]}]}]}]}]}], ",", "size", ",", 
+    RowBox[{
+     RowBox[{"etc", ".", "of"}], " ", "the", " ", "points", " ", "and", " ", 
+     "lines", " ", "corresponding", " ", "to", " ", "the", " ", "specified", 
+     " ", 
+     RowBox[{"subset", ".", "6."}], " ", "Other", " ", "Graphics3D", " ", 
+     "options", " ", "passed", " ", "to", " ", 
+     RowBox[{"Graphics3D", ".", "The"}], " ", "implementation", " ", 
+     "description", " ", "with", " ", "design", " ", 
+     RowBox[{"patterns", ":", 
+      RowBox[{
+       RowBox[{"-", "Template"}], " ", "Method", " ", "is", " ", "used", " ", 
+       "for", " ", "the", " ", "general", " ", "flow", " ", "of", " ", "the", 
+       " ", "data", " ", "obtaining"}]}]}], ",", "parsing", ",", 
+    RowBox[{"and", " ", 
+     RowBox[{"plotting", ".", 
+      RowBox[{"-", "Strategy"}]}], " ", "is", " ", "used", " ", "for", " ", 
+     "the", " ", "different", " ", "types", " ", "of", " ", "plots", " ", 
+     "based", " ", "on", " ", "DateListPlot"}], ",", "BarChart", ",", 
+    RowBox[{"and", " ", 
+     RowBox[{"Graphics3D", ".", 
+      RowBox[{"-", "Decorator"}]}], " ", "is", " ", "used", " ", "to", " ", 
+     "endow", " ", "the", " ", "DateListPlot", " ", "based", " ", "plots", 
+     " ", "with", " ", "lines", " ", "of", " ", "the", " ", "commit", " ", 
+     RowBox[{"dependencies", ".", 
+      RowBox[{"-", "Decorator"}]}], " ", "is", " ", "used", " ", "to", " ", 
+     "give", " ", "color", " ", "to", " ", "the", " ", "ticks", " ", "and", 
+     " ", "points", " ", "in", " ", "the", " ", 
+     RowBox[{"plots", ".", 
+      RowBox[{"-", "For"}]}], " ", "a", " ", "collection", " ", "of", " ", 
+     "GitHub", " ", "projects", " ", "Composite", " ", "is", " ", "used", " ",
+      "to", " ", "obtain", " ", "plots", " ", "with", " ", "uniform", " ", 
+     "ranges"}], ",", 
+    RowBox[{
+    "and", " ", "to", " ", "make", " ", "a", " ", "3", "D", " ", "plot", " ", 
+     "of", " ", "the", " ", "data", " ", "of", " ", "all", " ", "projects", 
+     " ", "highlighting", " ", "a", " ", "subset", " ", "of", " ", "the", " ",
+      "data", " ", 
+     RowBox[{"points", ".", "The"}], " ", "functions", " ", "are", " ", "not",
+      " ", "put", " ", "into", " ", "a", " ", "real", " ", "Mathematica", " ",
+      "package", " ", "because", " ", "the", " ", "implementations", " ", 
+     "were", " ", "made", " ", "for", " ", "didactic", " ", 
+     RowBox[{"purposes", ".", 
+      RowBox[{"TODO", ":", 
+       RowBox[{
+        RowBox[{
+        "1.", " ", "Implement", " ", "standard", " ", "functions", " ", 
+         "based", " ", "on", " ", "the", " ", 
+         RowBox[{"classes", "/", "objects"}], " ", "implemented", " ", 
+         RowBox[{"here", ".", "2."}], " ", "Refactor", " ", "the", " ", 
+         "code", " ", "to", " ", "be", " ", "able", " ", "to", " ", "work", 
+         " ", "with", " ", "other", " ", "types", " ", "time", " ", "logs", 
+         " ", 
+         RowBox[{"data", ".", "This"}], " ", "file", " ", "was", " ", 
+         "created", " ", "using", " ", "Mathematica", " ", "Plugin", " ", 
+         "for", " ", "IntelliJ", " ", 
+         RowBox[{"IDEA", ".", "Anton"}], " ", "Antonov", " ", "2015"}], "-", 
+        "10", "-", "15"}]}]}]}]}], "*)"}], 
+  RowBox[{
+  "(*", "*********************************************************)"}], 
+  RowBox[{"(*", "Creation", "*)"}], 
+  RowBox[{
+  "(*", "*********************************************************)"}], 
+  RowBox[{"(*", 
+   RowBox[{"Clear", "[", "GitHubData", "]"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"MakeGitHubDataObject", "[", 
+      RowBox[{"user_String", ",", "project_String"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"objID", "=", 
+         RowBox[{"Unique", "[", "]"}]}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"GitHubData", "[", 
+         RowBox[{"{", 
+          RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"GitHubData", "[", 
+           RowBox[{"{", 
+            RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], 
+          "[", "\"\<CommitData\>\"", "]"}], "=", 
+         RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"GitHubData", "[", 
+           RowBox[{"{", 
+            RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], 
+          "[", "\"\<PlotFunction\>\"", "]"}], "=", "GHDDateListPlot"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"GitHubData", "[", 
+         RowBox[{"{", 
+          RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}]}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Data", " ", "download"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", "args__", "]"}], "[", 
+      RowBox[{"\"\<GetData\>\"", "[", "]"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"GitHubData", "[", "args", "]"}], "[", 
+      RowBox[{"\"\<GetData\>\"", "[", 
+       RowBox[{"1", ",", "30"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]",
+    "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<GetData\>\"", "[", 
+       RowBox[{"page_Integer", ",", "perPage_Integer"}], "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"obj", "=", 
+          RowBox[{"GitHubData", "[", 
+           RowBox[{"{", 
+            RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}]}], 
+         ",", "url", ",", "data"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", 
+            RowBox[{"obj", "[", "\"\<CommitData\>\"", "]"}], "]"}], "==", 
+           "0"}], ",", 
+          RowBox[{
+           RowBox[{"url", "=", 
+            RowBox[{
+            "StringTemplate", "[", 
+             "\"\<https://api.github.com/repos/`1`/`2`/commits?page=`3`&per_\
+page=`4`\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"data", "=", 
+            RowBox[{"Import", "[", 
+             RowBox[{
+              RowBox[{"url", "[", 
+               RowBox[{"user", ",", "project", ",", 
+                RowBox[{"ToString", "[", "page", "]"}], ",", 
+                RowBox[{"ToString", "[", "perPage", "]"}]}], "]"}], ",", 
+              "\"\<JSON\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"obj", "[", "\"\<CommitData\>\"", "]"}], "=", "data"}], 
+           ";"}]}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"obj", "[", "\"\<CommitData\>\"", "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "Parsing", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Clear", "[", "ParseGitRecord", "]"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ParseGitRecord", "[", "recRules_", "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "sha", ",", "message", ",", "committer", ",", "date", ",", 
+         "parentSha", ",", "htmlURL"}], "}"}], ",", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"Print", "[", "\"\<ParseGitRecord called.\>\"", "]"}], ";"}],
+         "*)"}], 
+       RowBox[{
+        RowBox[{"sha", "=", 
+         RowBox[{"\"\<sha\>\"", "/.", " ", "recRules"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"message", "=", 
+         RowBox[{"StringReplace", "[", 
+          RowBox[{
+           RowBox[{"\"\<message\>\"", "/.", " ", 
+            RowBox[{"(", 
+             RowBox[{"\"\<commit\>\"", "/.", " ", "recRules"}], ")"}]}], ",", 
+           RowBox[{"Whitespace", "->", "\"\< \>\""}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"committer", "=", 
+         RowBox[{"\"\<name\>\"", "/.", " ", 
+          RowBox[{"(", 
+           RowBox[{"\"\<committer\>\"", "/.", " ", 
+            RowBox[{"(", 
+             RowBox[{"\"\<commit\>\"", "/.", " ", "recRules"}], ")"}]}], 
+           ")"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"date", "=", 
+         RowBox[{"\"\<date\>\"", "/.", " ", 
+          RowBox[{"(", 
+           RowBox[{"\"\<committer\>\"", "/.", " ", 
+            RowBox[{"(", 
+             RowBox[{"\"\<commit\>\"", "/.", " ", "recRules"}], ")"}]}], 
+           ")"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"parentSha", "=", 
+         RowBox[{"\"\<sha\>\"", "/.", " ", 
+          RowBox[{"(", 
+           RowBox[{"\"\<parents\>\"", "/.", " ", "recRules"}], ")"}]}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"htmlURL", "=", 
+         RowBox[{"\"\<html_url\>\"", "/.", " ", "recRules"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Thread", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<sha\>\"", ",", "\"\<message\>\"", ",", "\"\<committer\>\"", 
+            ",", "\"\<date\>\"", ",", "\"\<parentSha\>\"", ",", 
+            "\"\<htmlURL\>\""}], "}"}], "->", 
+          RowBox[{"{", 
+           RowBox[{
+           "sha", ",", "message", ",", "committer", ",", "date", ",", 
+            "parentSha", ",", "htmlURL"}], "}"}]}], "]"}]}]}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<ParseData\>\"", "[", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"obj", "=", 
+          RowBox[{"GitHubData", "[", 
+           RowBox[{"{", 
+            RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}]}], 
+         ",", "commitRecs", ",", "graphRules", ",", "unknown", ",", 
+         "unknownDate"}], "}"}], ",", 
+       RowBox[{"(*", 
+        RowBox[{
+        "Similarly", " ", "to", " ", "the", " ", "previous", " ", 
+         "implementation", " ", 
+         RowBox[{"code", "."}]}], "*)"}], 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Length", "[", 
+             RowBox[{"obj", "[", "\"\<CommitRecords\>\"", "]"}], "]"}], "==", 
+            "0"}], "||", 
+           RowBox[{"!", 
+            RowBox[{"ListQ", "[", 
+             RowBox[{"obj", "[", "\"\<CommitRecords\>\"", "]"}], "]"}]}]}], 
+          ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"Evaluate", "[", "obj", "]"}], "[", 
+             "\"\<CommitRecords\>\"", "]"}], "=", 
+            RowBox[{"SortBy", "[", 
+             RowBox[{
+              RowBox[{"ParseGitRecord", "/@", 
+               RowBox[{"obj", "[", 
+                RowBox[{"\"\<GetData\>\"", "[", "]"}], "]"}]}], ",", 
+              RowBox[{
+               RowBox[{"\"\<date\>\"", "/.", " ", "#"}], "&"}]}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{"A", " ", 
+             RowBox[{"shortcut", "."}]}], "*)"}], 
+           RowBox[{"commitRecs", "=", 
+            RowBox[{
+             RowBox[{"GitHubData", "[", 
+              RowBox[{"{", 
+               RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], 
+             "[", "\"\<CommitRecords\>\"", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+            "Make", " ", "a", " ", "commits", " ", "graph", " ", "rules"}], 
+            "*)"}], 
+           RowBox[{"graphRules", "=", 
+            RowBox[{"Flatten", "@", 
+             RowBox[{"Map", "[", 
+              RowBox[{"Thread", ",", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"\"\<parentSha\>\"", "->", "\"\<sha\>\""}], ")"}], "/.",
+                 " ", "commitRecs"}]}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+            "Find", " ", "the", " ", "unknown", " ", "parents", " ", "and", 
+             " ", "add", " ", "empty", " ", "records", " ", "for", " ", 
+             RowBox[{"them", "."}]}], "*)"}], 
+           RowBox[{"unknown", "=", 
+            RowBox[{"Complement", "[", 
+             RowBox[{
+              RowBox[{"Union", "[", 
+               RowBox[{"Flatten", "[", 
+                RowBox[{"List", "@@@", "graphRules"}], "]"}], "]"}], ",", 
+              RowBox[{"\"\<sha\>\"", "/.", " ", "commitRecs"}]}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+            "Offset", " ", "the", " ", "commit", " ", "dates", " ", "of", " ",
+              "the", " ", "unknown", " ", "commits", " ", "to", " ", "be", 
+             " ", "one", " ", "day", " ", 
+             RowBox[{"behind", "."}]}], "*)"}], 
+           RowBox[{"unknownDate", "=", 
+            RowBox[{"DateString", "[", 
+             RowBox[{
+              RowBox[{"Min", "[", 
+               RowBox[{"Map", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"AbsoluteTime", "[", 
+                   RowBox[{"DateList", "[", "#", "]"}], "]"}], "&"}], ",", 
+                 RowBox[{"\"\<date\>\"", "/.", " ", "commitRecs"}]}], "]"}], 
+               "]"}], "-", 
+              RowBox[{"24", "*", "3600"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+            "Add", " ", "records", " ", "for", " ", "the", " ", "unknown", 
+             " ", 
+             RowBox[{"commits", "."}]}], "*)"}], 
+           RowBox[{"commitRecs", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{"commitRecs", ",", 
+              RowBox[{"Map", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\"\<sha\>\"", "->", "#"}], ",", 
+                   RowBox[{"\"\<message\>\"", "->", "\"\<none\>\""}], ",", 
+                   RowBox[{"\"\<committer\>\"", "->", "\"\<unknown\>\""}], 
+                   ",", 
+                   RowBox[{"\"\<date\>\"", "->", "unknownDate"}], ",", 
+                   RowBox[{"\"\<parentSha\>\"", "->", "\"\<none\>\""}]}], 
+                  "}"}], "&"}], ",", "unknown"}], "]"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"commitRecs", "=", 
+            RowBox[{"SortBy", "[", 
+             RowBox[{"commitRecs", ",", 
+              RowBox[{
+               RowBox[{"DateList", "[", 
+                RowBox[{"\"\<date\>\"", "/.", " ", "#"}], "]"}], "&"}]}], 
+             "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{"Assign", " ", "and", " ", "return", " ", 
+             RowBox[{"result", "."}]}], "*)"}], 
+           RowBox[{
+            RowBox[{"obj", "[", "\"\<CommitRecords\>\"", "]"}], "=", 
+            "commitRecs"}], ";"}]}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"obj", "[", "\"\<CommitRecords\>\"", "]"}]}]}], "]"}]}], 
+    ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Template", " ", "Method", " ", "for", " ", "\"\<Plot\>\""}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"GitHubDataHEAD", "=", "GitHubData"}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<TickLabels\>\"", "[", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"obj", "=", 
+          RowBox[{"GitHubDataHEAD", "[", 
+           RowBox[{"{", 
+            RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}]}], 
+         ",", "commitRecs", ",", "tickLabels"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"commitRecs", "=", 
+         RowBox[{"obj", "[", 
+          RowBox[{"\"\<ParseData\>\"", "[", "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"tickLabels", "=", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"\"\<message\>\"", ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<committer\>\"", ",", 
+              RowBox[{"GrayLevel", "[", "0.7", "]"}]}], "]"}], ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<date\>\"", ",", 
+              RowBox[{"GrayLevel", "[", "0.8", "]"}]}], "]"}]}], "}"}], "/.", 
+          " ", "commitRecs"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"tickLabels", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "1"}], "]"}], "]"}], "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringReplace", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"WhitespaceCharacter", "->", "\"\< \>\""}]}], "]"}], 
+           "&"}], "/@", 
+          RowBox[{"tickLabels", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], ";", 
+        "\[IndentingNewLine]", "tickLabels"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<DatePoints\>\"", "[", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"obj", "=", 
+          RowBox[{"GitHubDataHEAD", "[", 
+           RowBox[{"{", 
+            RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}]}], 
+         ",", "commitRecs"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"commitRecs", "=", 
+         RowBox[{"obj", "[", 
+          RowBox[{"\"\<ParseData\>\"", "[", "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"MapThread", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"AbsoluteTime", "[", 
+              RowBox[{"DateList", "[", "#1", "]"}], "]"}], ",", "#2"}], "}"}],
+            "&"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\"\<date\>\"", "/.", " ", "commitRecs"}], ",", 
+            RowBox[{"Range", "[", 
+             RowBox[{"Length", "[", "commitRecs", "]"}], "]"}]}], "}"}]}], 
+         "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<Plot\>\"", "[", "opts___", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"obj", "=", 
+          RowBox[{"GitHubDataHEAD", "[", 
+           RowBox[{"{", 
+            RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}]}], 
+         ",", "commitRecs", ",", "tickLabels", ",", "datePoints"}], "}"}], 
+       ",", 
+       RowBox[{
+        RowBox[{"commitRecs", "=", 
+         RowBox[{"obj", "[", 
+          RowBox[{"\"\<ParseData\>\"", "[", "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"tickLabels", "=", 
+         RowBox[{"obj", "[", 
+          RowBox[{"\"\<TickLabels\>\"", "[", "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"datePoints", "=", 
+         RowBox[{"obj", "[", 
+          RowBox[{"\"\<DatePoints\>\"", "[", "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"obj", "[", "\"\<PlotFunction\>\"", "]"}], "[", 
+         RowBox[{"datePoints", ",", "tickLabels", ",", "opts"}], "]"}]}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Plot", " ", "strategies"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GHDDateListPlot", "[", 
+      RowBox[{"datePoints_", ",", "tickLabels_", ",", 
+       RowBox[{"opts", ":", 
+        RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+     RowBox[{"DateListPlot", "[", 
+      RowBox[{
+       RowBox[{"MapThread", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Tooltip", "[", 
+           RowBox[{"#1", ",", "#2"}], "]"}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"datePoints", ",", "tickLabels"}], "}"}]}], "]"}], ",", 
+       "opts", ",", 
+       RowBox[{"Joined", "->", "False"}], ",", 
+       RowBox[{"PlotStyle", "->", 
+        RowBox[{"{", 
+         RowBox[{"PointSize", "[", "0.03", "]"}], "}"}]}], ",", 
+       RowBox[{"PlotRange", "->", "All"}], ",", 
+       RowBox[{"AspectRatio", "->", "2"}], ",", 
+       RowBox[{"ImageSize", "->", 
+        RowBox[{"{", 
+         RowBox[{"Automatic", ",", "800"}], "}"}]}], ",", 
+       RowBox[{"GridLines", "->", 
+        RowBox[{"{", 
+         RowBox[{"None", ",", "Automatic"}], "}"}]}], ",", 
+       RowBox[{"FrameTicks", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Automatic", ",", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                  RowBox[{"tickLabels", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}], ",", 
+                  RowBox[{"FontSize", "->", "14"}]}], "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "1", ",", 
+                RowBox[{"Length", "[", "tickLabels", "]"}]}], "}"}]}], 
+             "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Automatic", ",", "Automatic"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"FrameLabel", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"\"\<commit order\>\"", ",", "None"}], "}"}], ",", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1"}], "}"}], " ", "\"\<date\>\""}]}], 
+         "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GHDBarChart", "[", 
+      RowBox[{"datePoints_", ",", "tickLabels_", ",", 
+       RowBox[{"opts", ":", 
+        RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"distancesFromNow", "=", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"DateDifference", "[", 
+             RowBox[{
+              RowBox[{"DateList", "[", "#", "]"}], ",", 
+              RowBox[{"Date", "[", "]"}]}], "]"}], "&"}], ",", 
+           RowBox[{"datePoints", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}]}], "}"}], ",", 
+       RowBox[{"BarChart", "[", 
+        RowBox[{"distancesFromNow", ",", "opts", ",", 
+         RowBox[{"BarOrigin", "->", "Right"}], ",", 
+         RowBox[{"BarSpacing", "->", "0.5"}], ",", 
+         RowBox[{
+         "ChartElementFunction", "->", "\"\<GradientScaleRectangle\>\""}], 
+         ",", 
+         RowBox[{"Frame", "->", "True"}], ",", 
+         RowBox[{"GridLines", "->", "Automatic"}], ",", 
+         RowBox[{"Method", "->", 
+          RowBox[{"{", 
+           RowBox[{"\"\<GridLinesInFront\>\"", "->", "True"}], "}"}]}], ",", 
+         RowBox[{"PlotRangePadding", "->", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"None", ",", "0.5"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"None", ",", "0.3"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"FrameLabel", "->", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<commit order\>\"", ",", "None"}], "}"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"1", ",", "1"}], "}"}], " ", 
+             "\"\<number of days\>\""}]}], "}"}]}], ",", 
+         RowBox[{"FrameTicks", "->", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"Automatic", ",", 
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                    RowBox[{"tickLabels", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], ",", 
+                    RowBox[{"FontSize", "->", "14"}]}], "]"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", "1", ",", 
+                  RowBox[{"Length", "[", "tickLabels", "]"}]}], "}"}]}], 
+               "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"Automatic", ",", "Automatic"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"AspectRatio", "->", "3"}], ",", 
+         RowBox[{"ImageSize", "->", 
+          RowBox[{"{", 
+           RowBox[{"Automatic", ",", "700"}], "}"}]}]}], "]"}]}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GHDGraphics3D", "[", 
+      RowBox[{"datePoints_", ",", "tickLabels_", ",", 
+       RowBox[{"opts", ":", 
+        RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"distancesFromNow", "=", 
+          RowBox[{"Map", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"DateDifference", "[", 
+              RowBox[{
+               RowBox[{"DateList", "[", "#", "]"}], ",", 
+               RowBox[{"Date", "[", "]"}]}], "]"}], "&"}], ",", 
+            RowBox[{"datePoints", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}]}], ",", 
+         RowBox[{"committers", "=", 
+          RowBox[{"Union", "[", 
+           RowBox[{"tickLabels", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]}], ",", 
+         "committersAssoc"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"committersAssoc", "=", 
+         RowBox[{"AssociationThread", "[", 
+          RowBox[{"committers", ",", 
+           RowBox[{"Range", "[", 
+            RowBox[{"Length", "[", "committers", "]"}], "]"}]}], "]"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"Graphics3D", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Pink", ",", 
+            RowBox[{"PointSize", "[", "0.03", "]"}], ",", 
+            RowBox[{"Point", "[", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"#1", ",", 
+                  RowBox[{"committersAssoc", "[", "#2", "]"}], ",", "#3"}], 
+                 "}"}], "&"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"distancesFromNow", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+                 RowBox[{"tickLabels", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", "2"}], "]"}], "]"}], ",", 
+                 RowBox[{"datePoints", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", "2"}], "]"}], "]"}]}], "}"}]}], "]"}], 
+             "]"}], ",", 
+            RowBox[{"GrayLevel", "[", "0.5", "]"}], ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"#1", ",", 
+                  RowBox[{"committersAssoc", "[", "#2", "]"}], ",", "#3"}], 
+                 "}"}], "&"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"distancesFromNow", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+                 RowBox[{"tickLabels", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", "2"}], "]"}], "]"}], ",", 
+                 RowBox[{"datePoints", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", "2"}], "]"}], "]"}]}], "}"}]}], "]"}], 
+             "]"}]}], "}"}], ",", "opts", ",", 
+          RowBox[{"BoxRatios", "->", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1", ",", "4"}], "}"}]}], ",", 
+          RowBox[{"FaceGrids", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1"}], ",", "0", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0", ",", 
+               RowBox[{"-", "1"}]}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Axes", "->", "True"}], ",", 
+          RowBox[{"AxesLabel", "->", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<number of days ago\>\"", ",", "\"\<committer\>\"", ",", 
+             "\"\<commit order\>\""}], "}"}]}], ",", 
+          RowBox[{"Ticks", "->", 
+           RowBox[{"{", 
+            RowBox[{"Automatic", ",", 
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"i", ",", 
+                 RowBox[{"committers", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"i", ",", "1", ",", 
+                 RowBox[{"Length", "[", "committers", "]"}]}], "}"}]}], "]"}],
+              ",", 
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"i", ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"tickLabels", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", 
+                   RowBox[{"FontSize", "->", "14"}]}], "]"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"i", ",", "1", ",", 
+                 RowBox[{"Length", "[", "tickLabels", "]"}]}], "}"}]}], 
+              "]"}]}], "}"}]}]}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Other", " ", "methods"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<Dataset\>\"", "[", "]"}], "]"}], ":=", 
+     RowBox[{"Dataset", "[", 
+      RowBox[{"Association", "/@", 
+       RowBox[{
+        RowBox[{"GitHubData", "[", 
+         RowBox[{"{", 
+          RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], "[", 
+        "\"\<CommitRecords\>\"", "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<DatasetExtended\>\"", "[", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"datePoints", ",", "extendedRules"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"datePoints", "=", 
+         RowBox[{
+          RowBox[{"GitHubData", "[", 
+           RowBox[{"{", 
+            RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], "[", 
+          RowBox[{"\"\<DatePoints\>\"", "[", "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"extendedRules", "=", 
+         RowBox[{"Thread", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"GitHubData", "[", 
+              RowBox[{"{", 
+               RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], 
+             "[", 
+             RowBox[{"\"\<ParseData\>\"", "[", "]"}], "]"}], ",", 
+            RowBox[{"Thread", "[", 
+             RowBox[{"\"\<datePoint\>\"", "->", "datePoints"}], "]"}], ",", 
+            RowBox[{"\"\<project\>\"", "->", "project"}]}], "}"}], "]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"Dataset", "[", 
+         RowBox[{"Association", "/@", "extendedRules"}], "]"}]}]}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<ReferenceGraph\>\"", "[", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"graphRules", ",", "commitsGraph"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"graphRules", "=", 
+         RowBox[{"Flatten", "@", 
+          RowBox[{"Map", "[", 
+           RowBox[{"Thread", ",", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\"\<parentSha\>\"", "->", "\"\<sha\>\""}], ")"}], "/.",
+              "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"GitHubData", "[", 
+               RowBox[{"{", 
+                RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], 
+              "[", 
+              RowBox[{"\"\<ParseData\>\"", "[", "]"}], "]"}]}]}], "]"}]}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"commitsGraph", "=", 
+         RowBox[{"Graph", "[", 
+          RowBox[{"DirectedEdge", "@@@", "graphRules"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "commitsGraph"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<User\>\"", "[", "]"}], "]"}], ":=", "user"}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubData", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<Project\>\"", "[", "]"}], "]"}], ":=", "project"}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "GitHubDataDecorators", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Clear", "[", 
+    RowBox[{
+    "GitHubDataComponent", ",", "GitHubDataDecorator", ",", 
+     "GitHubDataColorFunctionDecorator"}], "]"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"GitHubDataComponentHEAD", "=", "GitHubDataComponent"}], ";"}], 
+   "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataComponent", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<Plot\>\"", "[", "opts___", "]"}], "]"}], ":=", 
+     RowBox[{"Print", "[", "\"\<Error\>\"", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataDecorator", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}],
+         ",", "component_"}], "]"}], "[", "s_", "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"GitHubDataComponentHEAD", "=", "GitHubDataDecorator"}], 
+        "}"}], ",", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<Decorator abstract component call. Head[component]=\>\"", ",", 
+           RowBox[{"Head", "[", "component", "]"}]}], "]"}], ";"}], "*)"}], 
+       RowBox[{"(*", 
+        RowBox[{"Use", " ", 
+         RowBox[{
+          RowBox[{"GitHubDataComponent", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"objID", ",", "user", ",", "project"}], "}"}], ",", 
+            "component"}], "]"}], "[", "s", "]"}], " ", "in", " ", "the", " ",
+          "concrete", " ", 
+         RowBox[{"decorators", "."}]}], "*)"}], 
+       RowBox[{"component", "[", "s", "]"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataDecorator", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}],
+         ",", "component_"}], "]"}], "[", 
+      RowBox[{"\"\<Plot\>\"", "[", "opts___", "]"}], "]"}], ":=", 
+     RowBox[{"component", "[", 
+      RowBox[{"\"\<Plot\>\"", "[", "opts", "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataColorFunctionDecorator", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}],
+         ",", "component_"}], "]"}], "[", "s_", "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "GitHubDataComponentHEAD", "=", "GitHubDataColorFunctionDecorator"}], 
+        "}"}], ",", 
+       RowBox[{
+        RowBox[{"GitHubDataDecorator", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"objID", ",", "user", ",", "project"}], "}"}], ",", 
+          "component"}], "]"}], "[", "s", "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataColorFunctionDecorator", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}],
+         ",", "component_"}], "]"}], "[", 
+      RowBox[{"\"\<Plot\>\"", "[", "opts___", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"obj", "=", 
+          RowBox[{"GitHubDataDecorator", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"objID", ",", "user", ",", "project"}], "}"}], ",", 
+            "component"}], "]"}]}], ",", "gr", ",", "commitRecs", ",", 
+         "datePoints", ",", "colorFunc", ",", "pSize"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"gr", "=", 
+         RowBox[{"obj", "[", 
+          RowBox[{"\"\<Plot\>\"", "[", 
+           RowBox[{"DeleteCases", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"PointSize", "->", "_"}], ")"}], "|", 
+              RowBox[{"(", 
+               RowBox[{"\"\<DecoratorColorFunction\>\"", "->", "_"}], 
+               ")"}]}]}], "]"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"get", " ", "option", " ", "values"}], "*)"}], 
+        RowBox[{"colorFunc", "=", 
+         RowBox[{"OptionValue", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<DecoratorColorFunction\>\"", "->", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Blend", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"Black", ",", "Red"}], "}"}], ",", "#"}], "]"}], 
+                 "&"}], ")"}]}], "}"}]}], "]"}], ",", 
+           "\"\<DecoratorColorFunction\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"pSize", "=", 
+         RowBox[{"OptionValue", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"PointSize", "->", "0.015"}], "}"}]}], "]"}], ",", 
+           "PointSize"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"decorate", " ", "the", " ", "tick", " ", "labels"}], "*)"}], 
+        RowBox[{"gr", "=", 
+         RowBox[{"gr", "/.", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"GrayLevel", "[", "x_", "]"}], ":>", 
+            RowBox[{"colorFunc", "[", "x", "]"}]}], "}"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"decorate", " ", "the", " ", "graphics"}], "*)"}], 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"obj", "[", "\"\<PlotFunction\>\"", "]"}], "===", 
+           "GHDDateListPlot"}], ",", 
+          RowBox[{
+           RowBox[{"commitRecs", "=", 
+            RowBox[{"obj", "[", 
+             RowBox[{"\"\<ParseData\>\"", "[", "]"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"datePoints", "=", 
+            RowBox[{"obj", "[", 
+             RowBox[{"\"\<DatePoints\>\"", "[", "]"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"gr", "=", 
+            RowBox[{"Show", "[", 
+             RowBox[{"{", 
+              RowBox[{"gr", ",", 
+               RowBox[{"Graphics", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"colorFunc", "[", "0.2", "]"}], ",", 
+                  RowBox[{"Line", "[", "datePoints", "]"}], ",", 
+                  RowBox[{"colorFunc", "[", "1", "]"}], ",", 
+                  RowBox[{"PointSize", "[", "pSize", "]"}], ",", 
+                  RowBox[{"Point", "[", "datePoints", "]"}]}], "}"}], "]"}]}],
+               "}"}], "]"}]}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+        "gr"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "GitHubDataMessageHyperlinks", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataMessageHyperlinks", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", "s_", "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"GitHubDataHEAD", "=", "GitHubDataMessageHyperlinks"}], "}"}],
+        ",", 
+       RowBox[{
+        RowBox[{"GitHubData", "[", 
+         RowBox[{"{", 
+          RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], "[", 
+        "s", "]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataMessageHyperlinks", "[", 
+       RowBox[{"{", 
+        RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}], 
+       "]"}], "[", 
+      RowBox[{"\"\<TickLabels\>\"", "[", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", "tickLabels", "}"}], ",", 
+       RowBox[{
+        RowBox[{"tickLabels", "=", 
+         RowBox[{
+          RowBox[{"GitHubData", "[", 
+           RowBox[{"{", 
+            RowBox[{"objID", ",", "user", ",", "project"}], "}"}], "]"}], "[", 
+          RowBox[{"\"\<TickLabels\>\"", "[", "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"tickLabels", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "1"}], "]"}], "]"}], "=", 
+         RowBox[{"MapThread", "[", 
+          RowBox[{
+           RowBox[{"Function", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"mess", ",", "url"}], "}"}], ",", 
+             RowBox[{"Button", "[", 
+              RowBox[{
+               RowBox[{"Mouseover", "[", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{"mess", ",", "\"\<Text\>\""}], "]"}], ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"mess", ",", "\"\<HyperlinkActive\>\""}], "]"}]}], 
+                "]"}], ",", 
+               RowBox[{"NotebookLocate", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"URL", "[", "url", "]"}], ",", "None"}], "}"}], 
+                "]"}], ",", 
+               RowBox[{"Appearance", "->", "None"}]}], "]"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"tickLabels", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+             RowBox[{"\"\<htmlURL\>\"", "/.", " ", "commitRecs"}]}], "}"}]}], 
+          "]"}]}], ";", "\[IndentingNewLine]", "tickLabels"}]}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "GitHubDataCommitPathsDecorator", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataCommitPathsDecorator", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}],
+         ",", "component_"}], "]"}], "[", "s_", "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "GitHubDataComponentHEAD", "=", "GitHubDataCommitPathsDecorator"}], 
+        "}"}], ",", 
+       RowBox[{
+        RowBox[{"GitHubDataDecorator", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"objID", ",", "user", ",", "project"}], "}"}], ",", 
+          "component"}], "]"}], "[", "s", "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataCommitPathsDecorator", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"objID_", ",", "user_String", ",", "project_String"}], "}"}],
+         ",", "component_"}], "]"}], "[", 
+      RowBox[{"\"\<Plot\>\"", "[", "opts___", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"obj", "=", 
+          RowBox[{"GitHubDataDecorator", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"objID", ",", "user", ",", "project"}], "}"}], ",", 
+            "component"}], "]"}]}], ",", "gr", ",", "commitRecs", ",", 
+         "graphRules", ",", "commitsGraph", ",", "roots", ",", "leaves", ",", 
+         "paths", ",", "shaInds", ",", "pathsByInds", ",", "datePoints", ",", 
+         RowBox[{"pointSize", "=", "0.03"}]}], "}"}], ",", 
+       RowBox[{"(*", 
+        RowBox[{"Base", " ", "plot"}], "*)"}], 
+       RowBox[{
+        RowBox[{"gr", "=", 
+         RowBox[{"obj", "[", 
+          RowBox[{"\"\<Plot\>\"", "[", "opts", "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{
+         "If", " ", "the", " ", "right", " ", "function", " ", "is", " ", 
+          "used", " ", "decorate", " ", "it"}], "*)"}], 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"obj", "[", "\"\<PlotFunction\>\"", "]"}], "===", 
+           "GHDDateListPlot"}], ",", 
+          RowBox[{"(*", 
+           RowBox[{"Make", " ", "a", " ", "commits", " ", "graph"}], "*)"}], 
+          RowBox[{
+           RowBox[{"commitRecs", "=", 
+            RowBox[{"obj", "[", 
+             RowBox[{"\"\<ParseData\>\"", "[", "]"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"graphRules", "=", 
+            RowBox[{"Flatten", "@", 
+             RowBox[{"Map", "[", 
+              RowBox[{"Thread", ",", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"\"\<parentSha\>\"", "->", "\"\<sha\>\""}], ")"}], "/.",
+                 " ", "commitRecs"}]}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"commitsGraph", "=", 
+            RowBox[{"Graph", "[", 
+             RowBox[{"DirectedEdge", "@@@", "graphRules"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{"Find", " ", "paths"}], "*)"}], 
+           RowBox[{"roots", "=", 
+            RowBox[{
+             RowBox[{"Select", "[", 
+              RowBox[{"graphRules", ",", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "==", "\"\<none\>\""}], 
+                "&"}]}], "]"}], "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", "2"}], "]"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"leaves", "=", 
+            RowBox[{"Complement", "[", 
+             RowBox[{
+              RowBox[{"graphRules", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "2"}], "]"}], "]"}], ",", 
+              RowBox[{"graphRules", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"paths", "=", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{
+              RowBox[{"Outer", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"FindPath", "[", 
+                  RowBox[{"commitsGraph", ",", "#1", ",", "#2", ",", 
+                   RowBox[{"Length", "[", "commitRecs", "]"}], ",", "All"}], 
+                  "]"}], "&"}], ",", "roots", ",", "leaves"}], "]"}], ",", 
+              "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"paths", "=", 
+            RowBox[{"SortBy", "[", 
+             RowBox[{"paths", ",", 
+              RowBox[{
+               RowBox[{"-", 
+                RowBox[{"Length", "[", "#", "]"}]}], "&"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"shaInds", "=", 
+            RowBox[{"AssociationThread", "[", 
+             RowBox[{
+              RowBox[{"\"\<sha\>\"", "/.", " ", "commitRecs"}], ",", 
+              RowBox[{"Range", "[", 
+               RowBox[{"Length", "[", "commitRecs", "]"}], "]"}]}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"pathsByInds", "=", 
+            RowBox[{"Map", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"shaInds", "/@", "#"}], "&"}], ",", "paths"}], "]"}]}],
+            ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+            "Combine", " ", "the", " ", "base", " ", "plot", " ", "and", " ", 
+             "with", " ", "the", " ", "paths", " ", "plot"}], "*)"}], 
+           RowBox[{"datePoints", "=", 
+            RowBox[{"obj", "[", 
+             RowBox[{"\"\<DatePoints\>\"", "[", "]"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"gr", "=", 
+            RowBox[{"Show", "[", 
+             RowBox[{"gr", ",", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Opacity", "[", "0.5", "]"}], ",", 
+                 RowBox[{"Thickness", "[", "0.01", "]"}], ",", 
+                 RowBox[{"MapThread", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"ColorData", "[", "\"\<TemperatureMap\>\"", "]"}],
+                     "[", "#2", "]"}], ",", 
+                    RowBox[{"Mouseover", "[", 
+                    RowBox[{
+                    RowBox[{"Line", "[", 
+                    RowBox[{"datePoints", "[", 
+                    RowBox[{"[", "#1", "]"}], "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"PointSize", "[", 
+                    RowBox[{"pointSize", "*", "1.18"}], "]"}], ",", 
+                    RowBox[{"Point", "[", 
+                    RowBox[{"datePoints", "[", 
+                    RowBox[{"[", "#1", "]"}], "]"}], "]"}]}], "}"}]}], 
+                    "]"}]}], "}"}], "&"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"pathsByInds", ",", 
+                    RowBox[{"RandomSample", "[", 
+                    RowBox[{"Range", "[", 
+                    RowBox[{"0", ",", "1", ",", 
+                    RowBox[{"1", "/", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Length", "[", "pathsByInds", "]"}], "-", "1"}], 
+                    ")"}]}]}], "]"}], "]"}]}], "}"}]}], "]"}], ",", 
+                 RowBox[{"Opacity", "[", "1", "]"}], ",", "LightBlue", ",", 
+                 RowBox[{"PointSize", "[", 
+                  RowBox[{"pointSize", "*", "0.66"}], "]"}], ",", 
+                 RowBox[{"MapThread", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Tooltip", "[", 
+                    RowBox[{
+                    RowBox[{"Point", "[", "#1", "]"}], ",", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"#2", ",", "\"\< \>\"", ",", 
+                    RowBox[{"DateDifference", "[", 
+                    RowBox[{
+                    RowBox[{"#1", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"Date", "[", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "\"\<Month\>\"", ",", "\"\<Day\>\"", ",", "\"\<Hour\>\"", 
+                    ",", "\"\<Minute\>\""}], "}"}]}], "]"}], ",", 
+                    "\"\< ago\>\""}], "}"}], "]"}]}], "]"}], "&"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"datePoints", ",", 
+                    RowBox[{"\"\<sha\>\"", "/.", " ", "commitRecs"}]}], 
+                    "}"}]}], "]"}]}], "}"}], "]"}]}], "]"}]}]}]}], "]"}], ";",
+         "\[IndentingNewLine]", "gr"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "GitHubDataComposite", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "(*", "*********************************************************)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", 
+    RowBox[{"GitHubDataCompositeComponent", ",", "GitHubDataComposite"}], 
+    "]"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"The", " ", "Component"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "GitHubDataCompositeComponentHEAD", "=", "GitHubDataCompositeComponent"}],
+     ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataCompositeComponent", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", 
+      RowBox[{"\"\<AddChild\>\"", "[", "newChild_", "]"}], "]"}], ":=", 
+     RowBox[{"GitHubDataCompositeHEAD", "[", 
+      RowBox[{"objID", ",", 
+       RowBox[{"Append", "[", 
+        RowBox[{"children", ",", "newChild"}], "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataCompositeComponent", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", 
+      RowBox[{"\"\<GetChild\>\"", "[", "childIndex_", "]"}], "]"}], ":=", 
+     RowBox[{"children", "[", 
+      RowBox[{"[", "childIndex", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]",
+    "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataCompositeComponent", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", 
+      RowBox[{"\"\<GetChildren\>\"", "[", "]"}], "]"}], ":=", "children"}], 
+    ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataCompositeComponent", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", 
+      RowBox[{"\"\<Plot\>\"", "[", "___", "]"}], "]"}], ":="}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "Print", "[", 
+      "\"\<Error: GitHubDataCompositeComponent is an abstract class.\>\"", 
+      "]"}], ";"}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataCompositeComponent", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", "s_", "]"}], ":=", 
+     RowBox[{
+     "Print", "[", 
+      "\"\<Error: GitHubDataCompositeComponent is an abstract class.\>\"", 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"The", " ", "Composite"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataComposite", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", 
+      RowBox[{"\"\<AddChild\>\"", "[", "newChild_", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "GitHubDataCompositeComponentHEAD", "=", "GitHubDataComposite"}], 
+        "}"}], ",", 
+       RowBox[{
+        RowBox[{"GitHubDataCompositeComponent", "[", 
+         RowBox[{"objID", ",", "children"}], "]"}], "[", 
+        RowBox[{"\"\<AddChild\>\"", "[", "newChild", "]"}], "]"}]}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataComposite", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", 
+      RowBox[{"\"\<GetChild\>\"", "[", "childIndex_", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "GitHubDataCompositeComponentHEAD", "=", "GitHubDataComposite"}], 
+        "}"}], ",", 
+       RowBox[{
+        RowBox[{"GitHubDataCompositeComponent", "[", 
+         RowBox[{"objID", ",", "children"}], "]"}], "[", 
+        RowBox[{"\"\<GetChild\>\"", "[", "childIndex", "]"}], "]"}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataComposite", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", 
+      RowBox[{"\"\<GetChildren\>\"", "[", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "GitHubDataCompositeComponentHEAD", "=", "GitHubDataComposite"}], 
+        "}"}], ",", 
+       RowBox[{
+        RowBox[{"GitHubDataCompositeComponent", "[", 
+         RowBox[{"objID", ",", "children"}], "]"}], "[", 
+        RowBox[{"\"\<GetChildren\>\"", "[", "]"}], "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"GitHubDataComposite", "[", 
+        RowBox[{"objID_", ",", "children_"}], "]"}], "[", "s_", "]"}], ":=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", "s", "]"}], "&"}], ",", "children"}], "]"}]}], 
+     ";"}], "*)"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataComposite", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", 
+      RowBox[{"\"\<Plot\>\"", "[", "opts___", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"plots", ",", "ranges", ",", "glRange"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"plots", "=", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"\"\<Plot\>\"", "[", "opts", "]"}], "]"}], "&"}], ",", 
+           "children"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{
+          "Instead", " ", "of", " ", "relying", " ", "on", " ", "the", " ", 
+           "PlotRange", " ", "specifications", " ", "in", " ", "the", " ", 
+           "plots", " ", "we", " ", "can", " ", "use", " ", "these"}], 
+          "..."}], "*)"}], 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"allDatePoints", "=", 
+           RowBox[{"Map", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"\"\<DatePoints\>\"", "[", "]"}], "]"}], "&"}], ",", 
+             "children"}], "]"}]}], ";"}], "*)"}], 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"dateRange", "=", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Min", "[", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{"allDatePoints", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "All", ",", "1"}], "]"}], "]"}], "]"}], 
+              "]"}], ",", 
+             RowBox[{"Max", "[", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{"allDatePoints", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "All", ",", "1"}], "]"}], "]"}], "]"}], 
+              "]"}]}], "}"}]}], ";"}], "*)"}], 
+        RowBox[{"ranges", "=", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"plots", ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"PlotRange", "->", "x_"}], ")"}], ":>", "x"}], ",", 
+           "Infinity"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"glRange", "=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Min", "[", 
+              RowBox[{"ranges", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ",", 
+             RowBox[{"Max", "[", 
+              RowBox[{"ranges", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Min", "[", 
+              RowBox[{"ranges", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}], ",", 
+             RowBox[{"Max", "[", 
+              RowBox[{"ranges", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]}], "}"}]}], 
+          "}"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"plots", "/.", " ", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"PlotRange", "->", "x_"}], ")"}], "->", 
+          RowBox[{"(", 
+           RowBox[{"PlotRange", "->", "glRange"}], ")"}]}]}]}]}], "]"}]}], 
+    ";"}], "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"GitHubDataComposite", "[", 
+       RowBox[{"objID_", ",", "children_"}], "]"}], "[", 
+      RowBox[{"\"\<Plot3D\>\"", "[", "opts___", "]"}], "]"}], ":=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "colorFunc", ",", "pSize", ",", "projectPlanesQ", ",", 
+         "subsetQueryFunc", ",", "subsetLinesQ", ",", "optsRest", ",", 
+         "subsetPlotStyle", ",", "globalTimeOrderQ", ",", "ghsDatePoints", 
+         ",", "projects", ",", "projectToCoordRules", ",", "ghsDate3DPoints", 
+         ",", "projectColors", ",", "grPrism", ",", "projectPlanes", ",", 
+         "ghsExtDs", ",", "crossQueryPoints", ",", "dateRange", ",", "t"}], 
+        "}"}], ",", 
+       RowBox[{"(*", 
+        RowBox[{"get", " ", "option", " ", "values"}], "*)"}], 
+       RowBox[{
+        RowBox[{"colorFunc", "=", 
+         RowBox[{"OptionValue", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"ColorFunction", "->", 
+               RowBox[{"ColorData", "[", 
+                RowBox[{
+                "\"\<SouthwestColors\>\"", ",", "\"\<ColorFunction\>\""}], 
+                "]"}]}], "}"}]}], "]"}], ",", "ColorFunction"}], "]"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"pSize", "=", 
+         RowBox[{"OptionValue", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"PointSize", "->", "0.015"}], "}"}]}], "]"}], ",", 
+           "PointSize"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"projectPlanesQ", "=", 
+         RowBox[{"OptionValue", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<ProjectPlanes\>\"", "->", "True"}], "}"}]}], "]"}],
+            ",", "\"\<ProjectPlanes\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"subsetQueryFunc", "=", 
+         RowBox[{"OptionValue", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<SubsetQueryFunction\>\"", "->", "None"}], "}"}]}], 
+            "]"}], ",", "\"\<SubsetQueryFunction\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"subsetLinesQ", "=", 
+         RowBox[{"OptionValue", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<SubsetLines\>\"", "->", "False"}], "}"}]}], "]"}], 
+           ",", "\"\<SubsetLines\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"subsetPlotStyle", "=", 
+         RowBox[{"OptionValue", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<SubsetPlotStyle\>\"", "->", 
+               RowBox[{"{", "}"}]}], "}"}]}], "]"}], ",", 
+           "\"\<SubsetPlotStyle\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"globalTimeOrderQ", "=", 
+         RowBox[{"OptionValue", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "opts", "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<GlobalTimeOrder\>\"", "->", "True"}], "}"}]}], 
+            "]"}], ",", "\"\<GlobalTimeOrder\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"optsRest", "=", 
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{"{", "opts", "}"}], ",", 
+           RowBox[{
+            RowBox[{"MemberQ", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Options", "[", "Graphics3D", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}]}], "]"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"ghsDatePoints", "=", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"\"\<DatePoints\>\"", "[", "]"}], "]"}], "&"}], ",", 
+           "children"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"projects", "=", 
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"\"\<Project\>\"", "[", "]"}], "]"}], "&"}], ",", 
+           "children"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"projectToCoordRules", "=", 
+         RowBox[{"Thread", "[", 
+          RowBox[{"projects", "->", 
+           RowBox[{"Range", "[", 
+            RowBox[{"Length", "[", "projects", "]"}], "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"ghsDate3DPoints", "=", 
+         RowBox[{"MapThread", "[", 
+          RowBox[{
+           RowBox[{"Function", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"dps", ",", "p"}], "}"}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Riffle", "[", 
+                RowBox[{"#", ",", "p"}], "]"}], "&"}], "/@", "dps"}]}], "]"}],
+            ",", 
+           RowBox[{"{", 
+            RowBox[{"ghsDatePoints", ",", 
+             RowBox[{"projects", "/.", "projectToCoordRules"}]}], "}"}]}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{"globalTimeOrderQ", ",", 
+          RowBox[{
+           RowBox[{"t", "=", 
+            RowBox[{"SortBy", "[", 
+             RowBox[{
+              RowBox[{"Flatten", "[", 
+               RowBox[{"ghsDate3DPoints", ",", "1"}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "&"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"t", "=", 
+            RowBox[{"Dispatch", "[", 
+             RowBox[{"MapIndexed", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"#1", "->", 
+                 RowBox[{"Append", "[", 
+                  RowBox[{
+                   RowBox[{"#1", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ";;", "2"}], "]"}], "]"}], ",", 
+                   RowBox[{"#2", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "&"}], ",", 
+               "t"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"ghsDate3DPoints", "=", 
+            RowBox[{"ghsDate3DPoints", "/.", " ", "t"}]}], ";"}]}], "]"}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"projectColors", "=", 
+         RowBox[{"colorFunc", "/@", 
+          RowBox[{"Rescale", "[", 
+           RowBox[{
+            RowBox[{"Range", "[", 
+             RowBox[{"Length", "[", "children", "]"}], "]"}], "/", 
+            RowBox[{"Length", "[", "children", "]"}]}], "]"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"TrueQ", "[", "projectPlanesQ", "]"}], ",", 
+          RowBox[{"projectPlanes", "=", 
+           RowBox[{"Map", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"InfinitePlane", "[", 
+               RowBox[{"Through", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"First", ",", "Last", ",", "Mean"}], "}"}], "[", 
+                 "#", "]"}], "]"}], "]"}], "&"}], ",", "ghsDate3DPoints"}], 
+            "]"}]}], ",", 
+          RowBox[{"projectPlanes", "=", 
+           RowBox[{"{", "}"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"TrueQ", "[", 
+           RowBox[{"subsetQueryFunc", "=!=", "None"}], "]"}], ",", 
+          RowBox[{
+           RowBox[{"ghsExtDs", "=", 
+            RowBox[{"Map", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"\"\<DatasetExtended\>\"", "[", "]"}], "]"}], "&"}], 
+              ",", "children"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"crossQueryPoints", "=", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{
+              RowBox[{"Map", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Flatten", "/@", 
+                  RowBox[{"Values", "[", 
+                   RowBox[{"Normal", "[", "#", "]"}], "]"}]}], "&"}], ",", 
+                RowBox[{"Map", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{
+                    RowBox[{"Select", "[", "subsetQueryFunc", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<datePoint\>\"", ",", "\"\<project\>\""}], 
+                    "}"}]}], "]"}], "/.", " ", "projectToCoordRules"}], "&"}],
+                   ",", "ghsExtDs"}], "]"}]}], "]"}], ",", "1"}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"crossQueryPoints", "=", 
+            RowBox[{"crossQueryPoints", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "3", ",", "2"}], "}"}]}], "]"}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{"globalTimeOrderQ", ",", 
+             RowBox[{"crossQueryPoints", "=", 
+              RowBox[{"crossQueryPoints", "/.", " ", "t"}]}]}], "]"}], 
+           ";"}]}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"dateRange", "=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Min", "[", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{"ghsDate3DPoints", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "All", ",", "1"}], "]"}], "]"}], "]"}], 
+            "]"}], ",", 
+           RowBox[{"Max", "[", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{"ghsDate3DPoints", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "All", ",", "1"}], "]"}], "]"}], "]"}], 
+            "]"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"grPrism", "=", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Lighting", "->", "\"\<Neutral\>\""}], ",", 
+             RowBox[{"Opacity", "[", "0.07", "]"}], ",", "projectPlanes", ",", 
+             RowBox[{"Lighting", "->", "Automatic"}], ",", 
+             RowBox[{"Opacity", "[", "0.9", "]"}], ",", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{
+               RowBox[{"Function", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"dps", ",", "col"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"col", ",", 
+                   RowBox[{"Line", "[", "dps", "]"}]}], "}"}]}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"ghsDate3DPoints", ",", "projectColors"}], "}"}]}], 
+              "]"}], ",", 
+             RowBox[{"PointSize", "[", "pSize", "]"}], ",", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{
+               RowBox[{"Function", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"dps", ",", "col"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"col", ",", 
+                   RowBox[{"Point", "[", "dps", "]"}]}], "}"}]}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"ghsDate3DPoints", ",", "projectColors"}], "}"}]}], 
+              "]"}], ",", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"TrueQ", "[", 
+                RowBox[{"subsetQueryFunc", "===", "None"}], "]"}], ",", 
+               RowBox[{"{", "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"PointSize", "[", 
+                  RowBox[{"pSize", "*", "1.1"}], "]"}], ",", "Red", ",", 
+                 RowBox[{"Arrowheads", "[", 
+                  RowBox[{"10", "^", 
+                   RowBox[{"-", 
+                    RowBox[{"Log", "[", 
+                    RowBox[{"9", ",", 
+                    RowBox[{"Abs", "[", 
+                    RowBox[{"Subtract", "@@", "dateRange"}], "]"}]}], 
+                    "]"}]}]}], "]"}], ",", 
+                 RowBox[{"Sequence", "@@", "subsetPlotStyle"}], ",", 
+                 RowBox[{"Point", "[", "crossQueryPoints", "]"}], ",", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{"TrueQ", "[", "subsetLinesQ", "]"}], ",", 
+                   RowBox[{"Arrow", "/@", 
+                    RowBox[{"Partition", "[", 
+                    RowBox[{
+                    RowBox[{"SortBy", "[", 
+                    RowBox[{"crossQueryPoints", ",", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}], "&"}]}], "]"}], ",", "2", 
+                    ",", "1"}], "]"}]}], ",", 
+                   RowBox[{"{", "}"}]}], "]"}]}], "}"}]}], "]"}]}], "}"}], 
+           ",", "optsRest", ",", 
+           RowBox[{"BoxRatios", "->", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "2"}], "}"}]}], ",", 
+           RowBox[{"Axes", "->", "True"}], ",", 
+           RowBox[{"AxesLabel", "->", 
+            RowBox[{"{", 
+             RowBox[{"None", ",", "None", ",", "\"\<commit order\>\""}], 
+             "}"}]}], ",", 
+           RowBox[{"AxesEdge", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "1"}], ",", 
+                RowBox[{"-", "1"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", 
+                RowBox[{"-", "1"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "1"}], ",", 
+                RowBox[{"-", "1"}]}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"Ticks", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Function", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"xmin", ",", "xmax"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"#", ",", 
+                    RowBox[{"DateString", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
+                 RowBox[{"FindDivisions", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"xmin", ",", "xmax"}], "}"}], ",", "10"}], 
+                  "]"}]}]}], "]"}], ",", 
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"projects", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", "1", ",", 
+                  RowBox[{"Length", "[", "projects", "]"}]}], "}"}]}], "]"}], 
+              ",", "Automatic"}], "}"}]}], ",", 
+           RowBox[{"FaceGrids", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "1"}], ",", "0", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0", ",", 
+                RowBox[{"-", "1"}]}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"PlotRange", "->", 
+            RowBox[{"{", 
+             RowBox[{"dateRange", ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", 
+                RowBox[{
+                 RowBox[{"Length", "[", "projects", "]"}], "+", "1"}]}], 
+               "}"}], ",", "All"}], "}"}]}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "grPrism"}]}], "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.910509057930643*^9, 3.9105090765335984`*^9}, 
+   3.910509138598975*^9, 3.910531061129292*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"9427b6f4-5acd-4205-aa6c-3d0f4a1f55e5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Visuals", "Section",
+ CellChangeTimes->{{3.9105091947544837`*^9, 
+  3.9105091962983527`*^9}},ExpressionUUID->"2c791fac-cdfc-4fe3-b2f0-\
+75d5a8789c66"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"ghs", "=", 
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"MakeGitHubDataObject", "[", 
+      RowBox[{"\"\<yujieteo\>\"", ",", "#"}], "]"}], "&"}], ",", 
+    RowBox[{"{", "\"\<play\>\"", "}"}]}], "]"}]}], "\n", 
+ RowBox[{"ghComposite", "=", 
+  RowBox[{"GitHubDataComposite", "[", 
+   RowBox[{
+    RowBox[{"Unique", "[", "]"}], ",", "ghs"}], "]"}]}], "\n", 
+ RowBox[{"ghComposite", "[", 
+  RowBox[{"\"\<Plot3D\>\"", "[", 
+   RowBox[{
+    RowBox[{"\"\<ProjectPlanes\>\"", "->", "True"}], ",", 
+    RowBox[{"\"\<GlobalTimeOrder\>\"", "->", "False"}], ",", 
+    RowBox[{"BoxRatios", "->", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "2"}], "}"}]}], ",", 
+    RowBox[{"ImageSize", "->", 
+     RowBox[{"{", 
+      RowBox[{"Automatic", ",", "1000"}], "}"}]}]}], "]"}], "]"}]}], "Input",
+ CellLabel->"In[41]:=",ExpressionUUID->"07070875-9456-414f-a5a9-8fdd78795705"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"GitHubData", "[", 
+   RowBox[{"{", 
+    RowBox[{"$11", ",", "\<\"yujieteo\"\>", ",", "\<\"play\"\>"}], "}"}], 
+   "]"}], "}"}]], "Output",
+ CellChangeTimes->{3.9105310721281524`*^9, 3.9106585472745895`*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"69f98f9b-a037-4675-9bb1-e796ebb261a6"],
+
+Cell[BoxData[
+ RowBox[{"GitHubDataComposite", "[", 
+  RowBox[{"$12", ",", 
+   RowBox[{"{", 
+    RowBox[{"GitHubData", "[", 
+     RowBox[{"{", 
+      RowBox[{"$11", ",", "\<\"yujieteo\"\>", ",", "\<\"play\"\>"}], "}"}], 
+     "]"}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.9105310721281524`*^9, 3.9106585472745895`*^9},
+ CellLabel->"Out[42]=",ExpressionUUID->"4c4665f7-c388-439d-b053-bbbe8ab39413"],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {Opacity[0.07], 
+    StyleBox[
+     TagBox[
+      ConicHullRegion3DBox[{{3.910453349*^9, 1, 1}, {3.91065904*^9, 1, 13}, {
+        3.9105766988461537`*^9, 1, 7}}],
+      "InfinitePlane"],
+     Lighting->"Neutral"]}, 
+   {Opacity[0.9], 
+    StyleBox[{
+      {RGBColor[0.396811, 0.31014, 0.204105], 
+       Line3DBox[{{3.910453349*^9, 1, 1}, {3.910539749*^9, 1, 2}, {
+         3.910540181*^9, 1, 3}, {3.910545251*^9, 1, 4}, {
+         3.910550671*^9, 1, 5}, {3.910559748*^9, 1, 6}, {
+         3.91055989*^9, 1, 7}, {3.910596773*^9, 1, 8}, {
+         3.910610762*^9, 1, 9}, {3.910611696*^9, 1, 10}, {
+         3.910612519*^9, 1, 11}, {3.910657456*^9, 1, 12}, {
+         3.91065904*^9, 1, 13}}]}, 
+      {PointSize[0.015], 
+       {RGBColor[0.396811, 0.31014, 0.204105], 
+        Point3DBox[{{3.910453349*^9, 1, 1}, {3.910539749*^9, 1, 2}, {
+          3.910540181*^9, 1, 3}, {3.910545251*^9, 1, 4}, {
+          3.910550671*^9, 1, 5}, {3.910559748*^9, 1, 6}, {
+          3.91055989*^9, 1, 7}, {3.910596773*^9, 1, 8}, {
+          3.910610762*^9, 1, 9}, {3.910611696*^9, 1, 10}, {
+          3.910612519*^9, 1, 11}, {3.910657456*^9, 1, 12}, {
+          3.91065904*^9, 1, 13}}]}, {}}},
+     Lighting->Automatic]}},
+  Axes->True,
+  AxesEdge->{{-1, -1}, {1, -1}, {-1, -1}},
+  AxesLabel->{None, None, 
+    FormBox["\"commit order\"", TraditionalForm]},
+  BoxRatios->{1, 2, 2},
+  FaceGrids->{{-1, 0, 0}, {0, 1, 0}, {0, 0, -1}},
+  ImageSize->{Automatic, 1000},
+  PlotRange->{{3.910453349*^9, 3.91065904*^9}, {0, 2}, All},
+  Ticks->FrontEndValueCache[{
+     Function[{$CellContext`xmin, $CellContext`xmax}, 
+      Map[{#, 
+        DateString[#]}& , 
+       FindDivisions[{$CellContext`xmin, $CellContext`xmax}, 10]]], {{1, 
+       FormBox["\"play\"", TraditionalForm]}}, Automatic}, {{{3910450000, 
+       FormBox["\"Fri 1 Dec 2023 20:06:40\"", TraditionalForm]}, {3910475000, 
+       FormBox["\"Sat 2 Dec 2023 03:03:20\"", TraditionalForm]}, {3910500000, 
+       FormBox["\"Sat 2 Dec 2023 10:00:00\"", TraditionalForm]}, {3910525000, 
+       FormBox["\"Sat 2 Dec 2023 16:56:40\"", TraditionalForm]}, {3910550000, 
+       FormBox["\"Sat 2 Dec 2023 23:53:20\"", TraditionalForm]}, {3910575000, 
+       FormBox["\"Sun 3 Dec 2023 06:50:00\"", TraditionalForm]}, {3910600000, 
+       FormBox["\"Sun 3 Dec 2023 13:46:40\"", TraditionalForm]}, {3910625000, 
+       FormBox["\"Sun 3 Dec 2023 20:43:20\"", TraditionalForm]}, {3910650000, 
+       FormBox["\"Mon 4 Dec 2023 03:40:00\"", TraditionalForm]}, {3910675000, 
+       FormBox["\"Mon 4 Dec 2023 10:36:40\"", TraditionalForm]}}, {{1, 
+       FormBox["\"play\"", TraditionalForm]}}, Automatic}]]], "Output",
+ CellChangeTimes->{3.9105310721281524`*^9, 3.9106585488928337`*^9},
+ CellLabel->"Out[43]=",ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJzUvQm4ZcdRJpi8e+97r6pUVSqVVFpLdSRZ+2ZtpV11tViLtZVU2tdbkmqR
+5JKtXbaFnxCyLSxsIyPjBst+NrZl43bbQAO2mzbPuGkzxsAMAzQ9DEPJ0Ax8
+DQyNDc3QPdNvbmZGREZk/nnueSqZ7rnfV6/uzXMyM+LPyIjIyO3qrY/t3LZr
+62P337u1ueyRrW/bef+9jzaXvvWRcVLvB5zr/Z1zg42N64+/LzrX8ucfnHsd
+U18JX6eH4z8LLn1G43+7x/+mwq9l+eM5+r1Ir/nX6d1pnz5U7/rv8+N/s+FX
+zxQ1iGlc2+5QTPjbM8XEogdNVu1c9myOni1yHVT+nC6/F/7OzFPROl9WZqAh
+zzen8hW0TJe0yLNefKZp3M08hvqm5oXiZTmILVQuayitaXuXah9mVIc6giB8
+JWZWQrHfkFmnz4LO5JKQOEoTSaDfi+pdy6rrjZwSg5mUJvWpphMwpsLfvZk5
+LrvRjLrUNNzEXG5DvwPQ/Vg+0zknv1y/yfJNhYTBgmKPSXD9obwwjWiYE1bW
+sBTqx1xeTuKIyte/A3GxrOW6GRyxynA2LsFNnWNOvcpVEdXLmErO6qt9RrEZ
+3q2IyIphxhOLQA59+ATce/Itfm0VjCi1s0Mihf+xBM9RrdSWc2XWwYgJdklG
++VnjEogiY/FZjxlwWZqQG+sstB0zHHv0QiKu0cQpXpk4em8mb1n/jhAzNZeo
+0b0tpvWjDlqkHP5h41JXUZVKgbHSQt1owkZMOKo3vPRL6nuUi5W+MG53KSAr
+lJ+LACoNye93kI4ZJpalg5splJmpEcV0n3Hh/IMklKJdlqfskkakNE510SzN
+qTQjNaTphop9xhWVN9TlESu6v1LeZYsuwch9dp7qFJqoHmYX1a34G2he5p1p
+op5WXTUZmNFMagELME+F7P3dKk20QykCo0QXasqBLn7E1U5X3+9zmSMiOSr+
+gdbQebWNU5/pxKHA5hLUTZZP0nqJpEyRBDvCpM85ozZyiSrTpoam3CaVW7hu
+Wr8w/UyX/FZpgKeBTst6b09ExbmqaARmmVDRlrEns+bS2mMx1T3NWUaKnwVn
+elsuHZpcKbouHTO6+Lx5temSupRykl4de3pwrLluTQeSDmXGcuUw70qvlvM6
+RQJIC2AvKFZi8l5Dl9wL51RDOiwkpGr4p6PsQ/W9TU6QCuksJ9xKlNe/MnLs
+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
+8gcfeeSRXz1x4gTW8Z3mmx3n/X8pQ1tv\
+\>", "ImageResolution" -> \
+96.],ExpressionUUID->"708239f2-be82-4646-9a42-fe8ec437d9be"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"GitHubData", "[", 
+   RowBox[{"{", 
+    RowBox[{"\"\<yujieteo\>\"", ",", "\"\<play\>\""}], "}"}], "]"}], 
+  "}"}]], "Input",
+ CellChangeTimes->{{3.910531023559439*^9, 3.910531024068638*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"8b25ced3-f944-4092-a8c7-3a5929d50263"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"GitHubData", "[", 
+   RowBox[{"{", 
+    RowBox[{"\<\"yujieteo\"\>", ",", "\<\"play\"\>"}], "}"}], "]"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.9105091111412325`*^9, 3.910509158418783*^9, 
+  3.9105310259471927`*^9, 3.910658549285392*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"63fdaa01-ea37-4055-936e-225c2623b559"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GitHubBarChart", "[", 
+  RowBox[{"\"\<yujieteo\>\"", ",", "\"\<play\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.910509097516612*^9, 3.910509104645893*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"83c1b229-5fb9-4dd9-960f-b11cb0110bd7"],
+
+Cell[BoxData[
+ RowBox[{"GitHubBarChart", "[", 
+  RowBox[{"\<\"yujieteo\"\>", ",", "\<\"play\"\>"}], "]"}]], "Output",
+ CellChangeTimes->{3.91050907696475*^9, 3.910509112330327*^9, 
+  3.9105091592767687`*^9, 3.910530978636676*^9, 3.910531030663593*^9, 
+  3.910658549285392*^9},
+ CellLabel->"Out[45]=",ExpressionUUID->"f8f25801-d3cd-4c35-93f5-822573b77de3"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1269, 647.25},
+WindowMargins->{{Automatic, 17.25}, {Automatic, 41.25}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"dbbf75c8-a953-4069-8f88-b38ac27e827a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 156, 3, 98, "Title",ExpressionUUID->"256a3eaf-adf7-4d54-b882-918b704f819e"],
+Cell[739, 27, 268, 6, 85, "Subtitle",ExpressionUUID->"9a3f92f1-b4ec-4a0e-98d1-29be673f3e2b"],
+Cell[CellGroupData[{
+Cell[1032, 37, 151, 3, 67, "Section",ExpressionUUID->"868900ea-5a7a-4653-97b3-fbafadf79a9d"],
+Cell[1186, 42, 91283, 2212, 5931, "Input",ExpressionUUID->"9427b6f4-5acd-4205-aa6c-3d0f4a1f55e5"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[92506, 2259, 156, 3, 53, "Section",ExpressionUUID->"2c791fac-cdfc-4fe3-b2f0-75d5a8789c66"],
+Cell[CellGroupData[{
+Cell[92687, 2266, 908, 23, 67, "Input",ExpressionUUID->"07070875-9456-414f-a5a9-8fdd78795705"],
+Cell[93598, 2291, 325, 7, 32, "Output",ExpressionUUID->"69f98f9b-a037-4675-9bb1-e796ebb261a6"],
+Cell[93926, 2300, 405, 9, 32, "Output",ExpressionUUID->"4c4665f7-c388-439d-b053-bbbe8ab39413"],
+Cell[94334, 2311, 76318, 1261, 1017, 2671, 53, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"708239f2-be82-4646-9a42-fe8ec437d9be"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[170689, 3577, 309, 7, 28, "Input",ExpressionUUID->"8b25ced3-f944-4092-a8c7-3a5929d50263"],
+Cell[171001, 3586, 359, 8, 32, "Output",ExpressionUUID->"63fdaa01-ea37-4055-936e-225c2623b559"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[171397, 3599, 261, 4, 28, "Input",ExpressionUUID->"83c1b229-5fb9-4dd9-960f-b11cb0110bd7"],
+Cell[171661, 3605, 355, 6, 32, "Output",ExpressionUUID->"f8f25801-d3cd-4c35-93f5-822573b77de3"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,141 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6067,        133]
+NotebookOptionsPosition[      3465,         91]
+NotebookOutlinePosition[      3872,        107]
+CellTagsIndexPosition[      3829,        104]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Topics List", "Title",ExpressionUUID->"64b991b6-6fc5-4f0d-854a-822409de2e81"],
+
+Cell["Topics here are updated on 2 Jan 2024", "Text",
+ CellChangeTimes->{{3.91319749141517*^9, 
+  3.9131974946373568`*^9}},ExpressionUUID->"bcd826a7-934f-4f9a-bcfd-\
+331e28abb90d"],
+
+Cell[CellGroupData[{
+
+Cell["Probability", "Chapter",ExpressionUUID->"0c0f061c-c2d2-4ef5-ad2d-d81f12bb79ca"],
+
+Cell["Distributions", "ItemNumbered",ExpressionUUID->"2d797fe4-03bf-4c53-942f-cb2e0a285373"],
+
+Cell["Mean Average Deviation (\"MAD\")", "ItemNumbered",ExpressionUUID->"a5ce3937-cdba-4189-88a5-08b40081eede"],
+
+Cell["Moments", "ItemNumbered",ExpressionUUID->"b832be2c-7385-4c84-b72f-705d48799161"],
+
+Cell["Cumulants", "ItemNumbered",ExpressionUUID->"547ae77c-6511-42a7-9453-cbf03530725e"],
+
+Cell["Maximum-Sum Plot", "ItemNumbered",ExpressionUUID->"8597785e-c49b-41b9-bb16-56a0502f2907"],
+
+Cell["History (Long Peace, Stable Distribution Jumps)", "ItemNumbered",ExpressionUUID->"de042707-c569-465f-a2ba-458bf0ecc21a"],
+
+Cell["History as a Brownian Bridge", "ItemNumbered",ExpressionUUID->"b54f4717-2e44-42aa-8528-b07e67e2ebfb"],
+
+Cell["Simulated Annealing", "ItemNumbered",ExpressionUUID->"09dada2d-0e41-4b2b-a52f-8ff525cb332e"],
+
+Cell["Criticism of Nina Teicholz (Reading Risk Ratios)", "ItemNumbered",ExpressionUUID->"819f87fb-03f9-487c-a71c-adc67c2b76d6"],
+
+Cell["Undefined Moments for Stable Distribution.", "ItemNumbered",ExpressionUUID->"a9ea71f5-9361-45d4-8e55-648b9c16688d"],
+
+Cell["Mutual Information in correlation", "ItemNumbered",ExpressionUUID->"496ee447-0e9b-4013-a5a3-6f2b479fb758"],
+
+Cell["Weak and Strong Ergodicities", "ItemNumbered",ExpressionUUID->"6ac20657-6ea6-4403-afb4-e6aee552f715"],
+
+Cell["Hidden Moments", "ItemNumbered",ExpressionUUID->"e9dc3e27-cf6f-46dc-9b1d-9ae4ca6d2d0c"],
+
+Cell["Kappa Metric", "ItemNumbered",ExpressionUUID->"a4bfbcb5-62c9-40a6-8df0-2cbce6b4518d"],
+
+Cell["Connection Between All Distribution", "ItemNumbered",ExpressionUUID->"8ddbb96a-02c4-459b-aeae-55bae25ca73c"],
+
+Cell[TextData[{
+ "Power Law Transformation from [L, ",
+ Cell[BoxData[
+  FormBox[
+   TagBox[
+    StyleBox["\[Infinity]",
+     FontFamily->"Times",
+     FontWeight->"Plain",
+     FontSlant->"Plain"],
+    "MathMLPresentationTag",
+    AutoDelete->True], TraditionalForm]],ExpressionUUID->
+  "d2d3ff6f-7d4b-4e08-ae64-0133b072f155"],
+ "] to [L, H] (Violence)"
+}], "ItemNumbered",ExpressionUUID->"195e0732-3128-4802-80cb-acead1a1aaf7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Computational Universe", "Chapter",ExpressionUUID->"00979fa3-ed20-4166-bf41-17f25d6a7c86"],
+
+Cell["Renormalisation", "ItemNumbered",ExpressionUUID->"eac887c0-91bf-4bda-a1fc-7c0b13554682"],
+
+Cell["Cellular Automata", "ItemNumbered",ExpressionUUID->"460cabf9-8e8e-4449-bc71-bcb89ecd90a7"],
+
+Cell["Reversed Cellular Automata", "ItemNumbered",ExpressionUUID->"5b38aa8f-eaa8-4329-9f94-870ce073d7a5"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{581.25, 648.75},
+WindowMargins->{{423, Automatic}, {Automatic, 40.5}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4305eac5-2516-489d-9a44-6aa1d43917df"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 83, 0, 98, "Title",ExpressionUUID->"64b991b6-6fc5-4f0d-854a-822409de2e81"],
+Cell[666, 24, 180, 3, 35, "Text",ExpressionUUID->"bcd826a7-934f-4f9a-bcfd-331e28abb90d"],
+Cell[CellGroupData[{
+Cell[871, 31, 85, 0, 69, "Chapter",ExpressionUUID->"0c0f061c-c2d2-4ef5-ad2d-d81f12bb79ca"],
+Cell[959, 33, 92, 0, 32, "ItemNumbered",ExpressionUUID->"2d797fe4-03bf-4c53-942f-cb2e0a285373"],
+Cell[1054, 35, 111, 0, 32, "ItemNumbered",ExpressionUUID->"a5ce3937-cdba-4189-88a5-08b40081eede"],
+Cell[1168, 37, 86, 0, 32, "ItemNumbered",ExpressionUUID->"b832be2c-7385-4c84-b72f-705d48799161"],
+Cell[1257, 39, 88, 0, 32, "ItemNumbered",ExpressionUUID->"547ae77c-6511-42a7-9453-cbf03530725e"],
+Cell[1348, 41, 95, 0, 32, "ItemNumbered",ExpressionUUID->"8597785e-c49b-41b9-bb16-56a0502f2907"],
+Cell[1446, 43, 126, 0, 32, "ItemNumbered",ExpressionUUID->"de042707-c569-465f-a2ba-458bf0ecc21a"],
+Cell[1575, 45, 107, 0, 32, "ItemNumbered",ExpressionUUID->"b54f4717-2e44-42aa-8528-b07e67e2ebfb"],
+Cell[1685, 47, 98, 0, 32, "ItemNumbered",ExpressionUUID->"09dada2d-0e41-4b2b-a52f-8ff525cb332e"],
+Cell[1786, 49, 127, 0, 32, "ItemNumbered",ExpressionUUID->"819f87fb-03f9-487c-a71c-adc67c2b76d6"],
+Cell[1916, 51, 121, 0, 32, "ItemNumbered",ExpressionUUID->"a9ea71f5-9361-45d4-8e55-648b9c16688d"],
+Cell[2040, 53, 112, 0, 32, "ItemNumbered",ExpressionUUID->"496ee447-0e9b-4013-a5a3-6f2b479fb758"],
+Cell[2155, 55, 107, 0, 32, "ItemNumbered",ExpressionUUID->"6ac20657-6ea6-4403-afb4-e6aee552f715"],
+Cell[2265, 57, 93, 0, 32, "ItemNumbered",ExpressionUUID->"e9dc3e27-cf6f-46dc-9b1d-9ae4ca6d2d0c"],
+Cell[2361, 59, 91, 0, 32, "ItemNumbered",ExpressionUUID->"a4bfbcb5-62c9-40a6-8df0-2cbce6b4518d"],
+Cell[2455, 61, 114, 0, 32, "ItemNumbered",ExpressionUUID->"8ddbb96a-02c4-459b-aeae-55bae25ca73c"],
+Cell[2572, 63, 428, 13, 32, "ItemNumbered",ExpressionUUID->"195e0732-3128-4802-80cb-acead1a1aaf7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3037, 81, 96, 0, 69, "Chapter",ExpressionUUID->"00979fa3-ed20-4166-bf41-17f25d6a7c86"],
+Cell[3136, 83, 94, 0, 32, "ItemNumbered",ExpressionUUID->"eac887c0-91bf-4bda-a1fc-7c0b13554682"],
+Cell[3233, 85, 96, 0, 32, "ItemNumbered",ExpressionUUID->"460cabf9-8e8e-4449-bc71-bcb89ecd90a7"],
+Cell[3332, 87, 105, 0, 32, "ItemNumbered",ExpressionUUID->"5b38aa8f-eaa8-4329-9f94-870ce073d7a5"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
