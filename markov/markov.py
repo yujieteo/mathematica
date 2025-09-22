@@ -16,7 +16,7 @@ p_state_t = [p_init];
 for i in range(3):
     assert p_transition[i, :].sum() == 1;
 
-# ergodicity of range? how to know order of magnitude for stationary distribution?
+# ergodicity of range? how to know order of magnitude for stationary distribution? magnitude of second largest eigenvalue? see horn and johnson? convergence of chain.
 
 for i in range(100):
     p_state_t.append(p_state_t[-1] @ p_transition);
