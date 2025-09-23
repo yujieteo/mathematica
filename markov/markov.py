@@ -12,10 +12,6 @@ p_transition = np.array(
 )
 
 p_stationary = np.array(
-        [[1.0, 0, 0],
-        [0.01,0.85,0.14],
-        [0.06,0.04,0.9]]
-)
 
 p_state_t = [p_init];
 
@@ -33,12 +29,5 @@ state_dist = pd.DataFrame(p_state_t);
 
 print(state_dist);
 
-for i in range(100):
-    p_state_t.append(p_state_t[-1] @ p_stationary);
-
-state_dist = pd.DataFrame(p_state_t);
-
-# irreducibility has to do with linear algebra, rank of the matrix is lower than expected. note rank is not well defined in this case
-
-print(state_dist);
-
+# ergodicity theorem (strong law of large numbers?
+# apply brouwers fixed point theorem, prove existence of stationary distribution, in fact it is the first step of incompleteness theorems?
