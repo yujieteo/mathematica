@@ -11,8 +11,6 @@ p_transition = np.array(
      [0.06, 0.04, 0.9]]
 )
 
-p_stationary = np.array(
-
 p_state_t = [p_init];
 
 for i in range(3):
